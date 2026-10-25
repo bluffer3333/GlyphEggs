@@ -12,11 +12,10 @@ jobs:
           ls -la
           unzip -q -o "$(ls *.zip | head -1)"
           ls -la
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: "17"
-      - uses: android-actions/setup-android@v3
       - name: APK építése
         working-directory: GlyphSimon
         run: |
