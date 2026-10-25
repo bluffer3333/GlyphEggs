@@ -7,8 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+    
       - name: Kicsomagolás
-        run: unzip -q GlyphSimon.zip
+        run: |
+          ls -la
+          unzip -q -o "$(ls *.zip | head -1)"
+          ls -la
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
