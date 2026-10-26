@@ -6,7 +6,7 @@
 
 **Játékok és eszközök a Nothing Phone (2) hátoldali Glyph LED-jeire**
 
-Simon Says · Zárfeltörő · Glyph Tojás (Tamagocsi) · Széf · Üvegpörgetés · Iránytű — csempéről vagy saját mozdulattal, LED-szimulációval
+Simon Says · Zárfeltörő · Glyph Tojás · Egyensúly · Dínófutás · Széf · Üvegpörgetés · Iránytű · Vízmérték · Időzítő — csempéről vagy saját mozdulattal
 
 ![Platform](https://img.shields.io/badge/platform-Android%2014%2B-3DDC84?logo=android&logoColor=white)
 ![Kotlin](https://img.shields.io/badge/Kotlin-2.0-7F52FF?logo=kotlin&logoColor=white)
@@ -22,7 +22,12 @@ Simon Says · Zárfeltörő · Glyph Tojás (Tamagocsi) · Széf · Üvegpörget
 
 - [Funkciók](#funkciók)
 - [Gyorsbeállítás-csempék](#gyorsbeállítás-csempék)
+- [Felület](#felület)
 - [Zárfeltörő](#-zárfeltörő)
+- [Egyensúly](#-egyensúly)
+- [Dínófutás](#-dínófutás)
+- [Vízmérték](#-vízmérték)
+- [Időzítő](#-időzítő)
 - [Glyph Tojás](#-glyph-tojás)
 - [Széf](#-széf)
 - [Indító mozdulatok](#indító-mozdulatok)
@@ -50,6 +55,10 @@ Simon Says · Zárfeltörő · Glyph Tojás (Tamagocsi) · Széf · Üvegpörget
 | 🔓 | **Zárfeltörő** | Ügyességi játék: a C1 sávon csúszó fénynél akkor kopogj, amikor a rejtett édes ponton jár. 4 tüske, 3 élet. |
 | 🥚 | **Glyph Tojás** | Tamagocsi a hátlapon: kikel, nő, eszik, játszik, alszik, kakil, beteg lesz – kopogással és rázással gondozod. |
 | 🔐 | **Széf** | LED-villanásokból álló titkos kód rázással; helyes kódra fényshow, rezgés és megnyílik a titkos jegyzet, egy mappa, app vagy weboldal. |
+| ⚖️ | **Egyensúly** | Döntéssel tartsd a fénypontot a sávon, miközben a szél lökdösi. 80 mp-et kell kibírni. |
+| 🦖 | **Dínófutás** | A böngésző dínós játéka a felső sávon: kopogj, hogy átugord a kaktuszt; a villogó madár fölött ne ugorj. |
+| 📏 | **Vízmérték** | Fekve, hosszú élére állítva vagy töltőporton állva; pont vízszintesnél a két oldal / két vég egyszerre gyullad. |
+| ⏳ | **Időzítő** | Pomodoro és más fókusz-időzítők homokórás és más LED-animációkkal – nem kell a képernyőt nézni. |
 | 🧭 | **Iránytű** | Fekve mutatja az északot: durván a nagy íveken, pontosan egyetlen kis LED-del a C1 sávon. |
 | ✋ | **Indító mozdulatok** | Forgatás, megpörgetés, kopogás, rázás, lefordítás – bármelyik funkcióhoz bármelyik mozdulat. |
 | 👁️ | **LED-szimuláció** | A képernyőn is látszik, mit csinálnak a LED-ek – akár Glyph nélküli telefonon is. |
@@ -84,17 +93,90 @@ Húzd le kétszer a felső menüt, koppints a ✏️ (szerkesztés) ikonra, és 
 
 ---
 
+## Felület
+
+A főképernyő a Nothing Glyph Interface stílusát követi: felül az élő Glyph-kép, mellette a **Most fut** kártya (koppintás = leállítás) és az **Újra** kártya (az utoljára használt funkció egy koppintással), alatta a **Mozdulatfigyelés** kapcsoló. A funkciók fülekre vannak rendezve:
+
+| Fül | Tartalom |
+|---|---|
+| **Főoldal** | A kitűzött funkciók – alapból Iránytű, Pörgetés, Glyph Simon, Széf. A **Testreszabás** kártyával vagy bármelyik kártya **hosszú nyomásával** változtatható. |
+| **Játékok** | Glyph Simon, Zárfeltörő, Glyph Tojás, Egyensúly, Dínófutás |
+| **Eszközök** | Pörgetés, Iránytű, Széf, Vízmérték, Időzítő + a Széf és az Időzítő beállítása |
+| **Beállítások** | Indító mozdulatok, Csempék (választható), Háttérfutás, Rezgés, LED-szimuláció, Diagnosztika |
+
+Minden funkció-kártyán van egy **„i” gomb**: részletes súgó arról, hogyan indul, hogyan kell használni, és mit jelentenek a LED-ek – onnan egy koppintással indítható, vagy beállítható az indító mozdulata.
+
 ## 🔓 Zárfeltörő
 
 Az RPG-kből ismert zárfeltörés a hátlapon.
 
 1. Koppints a **Zárfeltörő** kártyára vagy csempére, és tedd le a telefont kijelzővel lefelé.
 2. A **C1 sávon** (16 kis LED) egy fénypont csúszik ide-oda. Valahol a sáv közepe táján van egy **rejtett édes pont**.
-3. **Kopogj a telefonon** pontosan akkor, amikor a fény ott jár (a szimulációban az *Érintés* gomb is jó).
+3. Amikor a fény az édes pontra ér, a telefon **egy kicsit rezzen**. Erre **kopogj a telefonon** (a szimulációban az *Érintés* gomb is jó). A reakcióidőt figyelembe veszi: a rezzenés után kb. 0,3 mp-ig még talál.
 4. **Közel jártál** (1–2 LED): a fény és a cél közti LED-ek kétszer felvillannak – így látod, hogy túl korán vagy túl későn nyomtad. Ez nem kerül életbe.
 5. **Nagyon mellé**: elvész egy élet. Az életeket a kamera két fele és a ferde csík mutatja (3 élet).
 6. **Talált**: kattan a zár (fényhullám, rezgés). A kinyitott tüskéket a D1 vonal mutatja; tüskénként gyorsul a fény.
 7. Mind a **4 tüske** nyitva: nagy fényáradat és rezgés. A legjobb eredményedet a főképernyő mutatja.
+
+## ⚖️ Egyensúly
+
+1. Indítsd, és tedd le kijelzővel lefelé (vagy tartsd vízszintesen a kezedben).
+2. A **felső sávon** egy fénypont gurul, mint golyó a deszkán: amerre lejt a telefon, arra gurul.
+3. **Szél** lökdösi. Hogy merről fúj, azt az oldalsó ívek mutatják (bal vagy jobb) – ellene kell dönteni.
+4. Ha leesik a sáv végéről, elvész egy élet (a kamera két fele és a ferde csík: 3 élet). A sáv szélén a pont pislogva figyelmeztet.
+5. 10 mp-enként egy LED gyullad a **D1 vonalon**; ha mind a 8 ég (80 mp), nyertél. Az idővel a szél erősödik.
+
+## 🦖 Dínófutás
+
+1. Indítsd, és tedd le kijelzővel lefelé. A **felső sáv** a pálya: a dínó a bal végén, jobbról jönnek az akadályok.
+2. **Kaktusz** (égő fény): **kopogj** – a dínó átugorja. Ugrás közben „fent” van: a ferde csík és a kamera teteje ég.
+3. **Madár** (villogó fény, 8 pont után): **ne ugorj**, átrepül fölötted.
+4. Egyre gyorsabb; 100 pontonként minden felvillan. 10 pontonként egy LED gyullad a D1 vonalon.
+5. Ütközésnél a pontszám: a vonal a tízeseket, a felső sáv az egyeseket mutatja. A rekordot a kártya mutatja.
+
+## 📏 Vízmérték
+
+A helyzetet magától felismeri – három módon használható:
+
+| Helyzet | Mit mér | Ha nem vízszintes | Ha vízszintes |
+|---|---|---|---|
+| **Fekve** (kijelzővel lefelé) | bal–jobb és előre–hátra | a magasabb oldal / vég ég | a két oldali ív és a két vég **egyszerre** ég |
+| **Hosszú élére állítva** / fekvő tájolásban falhoz tartva | a telefon hossza mentén | a magasabb vég ég (kamera vagy töltőport felőli) | **mindkét vég** egyszerre ég |
+| **Töltőporton állva** | a rövid oldal mentén | a magasabb oldal íve ég | **mindkét oldal** egyszerre ég |
+
+- A **felső sáv** mutatja az eltérés nagyságát: LED-enként 0,5°; 1° alatt a vége pislog.
+- Teljesen vízszintes (0,5°-on belül): **minden felvillan** és kicsit rezeg.
+- **Kalibrálás** helyzetenként: vízszintes felületen 2 kopogás = nulla, 3 = törlés (állítva a szimuláció Érintés gombjával).
+- Magától kikapcsol, ha 5 percig nem mozdul.
+
+## ⏳ Időzítő
+
+Fókusz-időzítő a LED-eken, hogy ne kelljen a képernyőt nézned. Az **Időzítő beállítása** oldalon (Eszközök fül) választasz, élő előnézettel.
+
+**Fajták:**
+
+| Fajta | Felépítés |
+|---|---|
+| Pomodoro | 25 perc fókusz / 5 perc szünet × 4, a végén 15 perc |
+| Rövid Pomodoro | 15 / 3 × 4, a végén 10 perc |
+| Mély fókusz | 50 / 10 × 3, a végén 20 perc |
+| 52 / 17 | 52 perc munka / 17 perc szünet × 3 |
+| Sprint | 10 / 2 × 5 |
+| Egyszeri időzítő | 1–90 perc, egy visszaszámlálás |
+| Homokóra | rövid, pl. 1–5 perc (fogmosás, tea, társasjáték) |
+
+**Animációk:**
+
+| Animáció | Hogyan néz ki |
+|---|---|
+| **Homokóra** | Felül (kamera, felső sáv) fogy a homok; egy szem kb. 1,5 mp-enként végigesik a gyűrű jobb oldalán és a függőleges vonalon a **töltőportnál lévő pontig**, alul gyűlik, és alulról felfelé megtelik |
+| Fogyó sáv | A felső sáv LED-enként fogy, az utolsó pislog |
+| Óramutató | Fénypont jár körbe a gyűrűn, mögötte megtelik |
+| Lélegző | 4 mp be, 4 mp ki ritmusban lélegzik a gyűrű; a vonal mutatja az időt |
+| Eső | Cseppek hullanak, egyre sűrűbben, ahogy fogy az idő |
+| Csak a vége | Teljes sötét, 10 mp-enként egy apró jel – semmi nem zavar |
+
+Szünetekben mindig a lélegző gyűrű megy (pihenés). **Kopogással:** 1 = hátralévő idő 3 mp-re, 2 = szünet / folytatás, 3 = következő szakasz. Szakasz végén rezgés és villogás, a végén ünneplés. Felemelés nem állítja le; az értesítésben látod a hátralévő időt.
 
 ## 🥚 Glyph Tojás
 
@@ -399,7 +481,13 @@ GlyphEggs/
 │       │   ├── PetSession.kt                 ← Glyph Tojás a LED-eken
 │       │   ├── PetActivity.kt                ← Glyph Tojás oldala
 │       │   ├── PetAlarmReceiver.kt           ← óránkénti ellenőrzés, értesítés
-│       │   ├── FeatureTiles.kt               ← Zárfeltörő, Széf, Tojás csempék
+│       │   ├── FeatureTiles.kt               ← funkció-csempék (Zár, Széf, Tojás, Vízmérték, Időzítő, Egyensúly)
+│       │   ├── LevelTool.kt                  ← Vízmérték
+│       │   ├── FocusTimer.kt                 ← Időzítő: fajták, animációk, kopogásos vezérlés
+│       │   ├── TimerActivity.kt              ← Időzítő beállítása előnézettel
+│       │   ├── BalanceGame.kt                ← Egyensúly játék
+│       │   ├── DinoGame.kt                   ← Dínófutás
+│       │   ├── InfoActivity.kt               ← részletes súgó minden funkcióhoz
 │       │   ├── SpinWheel.kt                  ← üvegpörgetés
 │       │   ├── Compass.kt                    ← iránytű
 │       │   ├── Direction.kt                  ← irányok és LED-zónák
