@@ -9,7 +9,6 @@ jobs:
       - uses: actions/checkout@v4
       - name: Kicsomagolás
         run: |
-          ls -la
           unzip -q -o "$(ls *.zip | head -1)"
           ls -la
       - uses: actions/setup-java@v5
@@ -17,11 +16,11 @@ jobs:
           distribution: temurin
           java-version: "17"
       - name: APK építése
-        working-directory: GlyphSimon
         run: |
+          cd "$(dirname "$(find . -maxdepth 2 -name gradlew | head -1)")"
           chmod +x gradlew
           ./gradlew assembleDebug --no-daemon
       - uses: actions/upload-artifact@v4
         with:
-          name: glyph-simon-apk
-          path: GlyphSimon/app/build/outputs/apk/debug/app-debug.apk
+          name: glyph-eggs-apk
+          path: "**/app/build/outputs/apk/debug/*.apk"
