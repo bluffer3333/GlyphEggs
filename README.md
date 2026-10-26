@@ -6,7 +6,7 @@
 
 **Játékok és eszközök a Nothing Phone (2) hátoldali Glyph LED-jeire**
 
-Simon Says dőléssel · Üvegpörgetés · Iránytű — mindhárom egy koppintásra a lehúzható menüből
+Simon Says dőléssel · Üvegpörgetés · Iránytű — csempéről vagy saját indító mozdulattal, LED-szimulációval
 
 ![Platform](https://img.shields.io/badge/platform-Android%2014%2B-3DDC84?logo=android&logoColor=white)
 ![Kotlin](https://img.shields.io/badge/Kotlin-2.0-7F52FF?logo=kotlin&logoColor=white)
@@ -22,6 +22,8 @@ Simon Says dőléssel · Üvegpörgetés · Iránytű — mindhárom egy koppint
 
 - [Funkciók](#funkciók)
 - [Gyorsbeállítás-csempék](#gyorsbeállítás-csempék)
+- [Indító mozdulatok](#indító-mozdulatok)
+- [LED-szimuláció](#led-szimuláció)
 - [LED-térkép](#led-térkép)
 - [Telepítés](#telepítés)
 - [Használat](#használat)
@@ -43,10 +45,13 @@ Simon Says dőléssel · Üvegpörgetés · Iránytű — mindhárom egy koppint
 | 🎮 | **Glyph Simon** | Klasszikus Simon Says: a LED-ek mutatnak egy sort, te a telefon döntésével ismétled. 8 szint, a haladást a C1 sáv mutatja. |
 | 🍾 | **Üvegpörgetés** | A fény körbefut a nagy gyűrűn, lassul, kattog, és megáll valakinél. Társasjátékhoz, döntéshez. |
 | 🧭 | **Iránytű** | Fekve mutatja az északot: durván a nagy íveken, pontosan egyetlen kis LED-del a C1 sávon. |
+| ✋ | **Indító mozdulatok** | Forgatás, megpörgetés, kopogás, rázás, lefordítás – bármelyik funkcióhoz bármelyik mozdulat. |
+| 👁️ | **LED-szimuláció** | A képernyőn is látszik, mit csinálnak a LED-ek – akár Glyph nélküli telefonon is. |
 
 **Közös tulajdonságok**
 
-- Mindhárom indítható a **lehúzható gyorsbeállítás-menüből** is, saját csempével.
+- Mindhárom indítható a **lehúzható gyorsbeállítás-menüből** csempével, és **saját indító mozdulattal** is.
+- **Nothing-stílusú felület**: ugyanaz a sötét, kártyás megjelenés, mint a telefon Glyph Interface beállításaiban, élő Glyph-előnézettel.
 - A telefon **kijelzővel lefelé** fekszik az asztalon, így a LED-ek felfelé néznek.
 - **Rezgéses visszajelzés**: indító jelzés, kattogó pörgetés, győzelmi rezgés.
 - **Akkubarát háttérfigyelés**: készenlétben lassú, kötegelt gyorsulásmérő; a giroszkóp csak akkor fut, ha a telefon le van fektetve.
@@ -60,11 +65,42 @@ Húzd le kétszer a felső menüt, koppints a ✏️ (szerkesztés) ikonra, és 
 
 | Csempe | Típus | Mit csinál |
 |---|---|---|
-| **Glyph Simon** | Kapcsoló | Be: a háttérben figyeli az indító mozdulatot (fekve 2× jobbra forgatás). Ki: leállítja a figyelést. A csempe világít, amíg figyel. |
+| **Glyph figyelés** | Kapcsoló | Be: a háttérben figyeli a beállított indító mozdulatokat, és elindítja a hozzájuk rendelt funkciót. Ki: leállítja a figyelést. A csempe világít, amíg figyel. |
 | **Pörgetés** | Gomb | Elindít egy pörgetést. Megvárja, hogy kijelzővel lefelé letedd (max. 15 mp). |
 | **Iránytű** | Gomb / kapcsoló | Elindítja az iránytűt; ha fut, egy újabb koppintás leállítja. A csempe világít, amíg fut. |
 
 > A csempe a rendszer menüjében él, ezért akkor is működik, ha az app nincs megnyitva. Ha egy Android-verzió nem engedi a csempéről közvetlenül indítani a szolgáltatást, az app magától megnyílik, és onnan indul.
+
+---
+
+## Indító mozdulatok
+
+A főképernyő **Mozdulatfigyelés** kapcsolójával (vagy a *Glyph figyelés* csempével) bekapcsolva a telefon a háttérben figyeli a mozdulatokat. Az **Indító mozdulatok** kártyára koppintva funkciónként választhatsz:
+
+| Mozdulat | Hogyan | Alapból |
+|---|---|---|
+| Jobbra forgatás 2× | Fekve kétszer kb. negyed fordulat jobbra | **Glyph Simon** |
+| Balra forgatás 2× | Fekve kétszer kb. negyed fordulat balra | – |
+| Jobbra, majd balra | Negyed fordulat jobbra, aztán vissza | – |
+| Balra, majd jobbra | Negyed fordulat balra, aztán vissza | – |
+| Megpörgetés | Egy lendülettel legalább egy teljes kör az asztalon | **Pörgetés** |
+| Kopogás 2× | Fekve kétszer gyorsan kopogtass a telefonon | **Iránytű** |
+| Kopogás 3× | Fekve háromszor gyorsan | – |
+| Rázás, majd lerakás | Rázd meg, és 6 mp-en belül tedd le kijelzővel lefelé | – |
+| Lefordítás 2× | Kijelzővel felfelé → lefelé, kétszer egymás után | – |
+| Nincs | Csak csempével vagy az appból indul | – |
+
+- **Bármelyik mozdulat bármelyik funkcióhoz** rendelhető. Egy mozdulat egyszerre csak egy funkcióhoz tartozhat: ha máshol már használtad, ott „Nincs” lesz.
+- A **kopogás érzékenysége** (alacsony / közepes / magas) ugyanitt állítható.
+- Felismeréskor rövid rezgés jelez. Egy mozdulat után 4 mp-ig nem figyel újat, hogy ne induljon kétszer.
+
+## LED-szimuláció
+
+**Koppints kétszer a „Glyph Eggs” címre** (vagy a Glyph-előnézetre): teljes képernyőn megjelenik a hátlap Glyph-rajza, és élőben mutatja, melyik LED ég.
+
+- Bármelyik telefonon működik. Glyph nélkül a funkciók „csak a képernyőn” futnak, így megmutathatod másnak is, hogyan működik.
+- Amíg a szimuláció nyitva van, a funkciók **kijelzővel felfelé** fekvő telefonnal is indulnak. Ilyenkor a rajz tükrözve jelenik meg, hogy minden LED a valódi helyén látsszon (a kamera felőli oldal ott, ahol a kamera van).
+- Alul gombokkal is indíthatod a Simont, a pörgetést és az iránytűt. Kilépés: dupla koppintás a rajzra.
 
 ---
 
@@ -169,7 +205,8 @@ jobs:
 1. Nyisd meg az appot, és engedélyezd az **értesítéseket**.
 2. **Akkumulátor-optimalizálás kikapcsolása** gomb. Enélkül a rendszer leállíthatja a háttérben.
 3. Add hozzá a csempéket.
-4. Próbáld ki a **Simon indítása most (teszt)** gombbal, és figyeld az *Élő szenzoradatok* részt.
+4. Kapcsold be a **Mozdulatfigyelés**t, és az **Indító mozdulatok** kártyákon állítsd be, mi indítsa a funkciókat.
+5. Próbáld ki az **Indítás most** kártyával, és figyeld a *Diagnosztika* részt.
 
 ---
 
@@ -177,8 +214,8 @@ jobs:
 
 ### 🎮 Glyph Simon
 
-1. Kapcsold be a **Glyph Simon** csempét.
-2. Tedd le a telefont kijelzővel lefelé, töltőport feléd, és **forgasd jobbra kétszer** kb. negyed fordulatot (felülről nézve óramutató irányába). Rövid rezgés jelzi, hogy felismerte.
+1. Kapcsold be a **Mozdulatfigyelés**t (vagy a *Glyph figyelés* csempét).
+2. Tedd le a telefont kijelzővel lefelé, töltőport feléd, és végezd el a Simonhoz beállított mozdulatot (alapból: **forgasd jobbra kétszer** kb. negyed fordulatot). Rövid rezgés jelzi, hogy felismerte. Vagy koppints az **Indítás most** kártyára.
 3. A LED-ek háromszor körbefutnak, majd elindul a játék.
 4. A telefon lejátssza a sort. Döntsd arra, amerre a LED villant, majd engedd vissza középre.
 5. Minden körben **az egész sort** végig kell dönteni, a végén egy új iránnyal.
@@ -187,14 +224,14 @@ jobs:
 
 ### 🍾 Üvegpörgetés
 
-1. Koppints a **Pörgetés** csempére.
+1. Koppints a **Pörgetés** csempére vagy kártyára – vagy, ha a figyelés be van kapcsolva, egyszerűen **pörgesd meg a telefont** az asztalon (alapbeállítás).
 2. Tedd le a telefont kijelzővel lefelé az asztal közepére.
 3. A fénypont 4–6 kört fut a gyűrűn, 5–7 mp alatt lelassul, a végén kattogó rezgéssel kúszik.
 4. Megáll: a kiválasztott hely 5-ször villog, a telefon rezeg, és 4 mp-ig égve marad. **Akire mutat, az a kiválasztott.**
 
 ### 🧭 Iránytű
 
-1. Koppints az **Iránytű** csempére, és tedd le a telefont kijelzővel lefelé egy sík felületre. A gyűrű egyszer felvillan.
+1. Koppints az **Iránytű** csempére vagy kártyára (vagy fekve **kopogj kétszer**, ha a figyelés be van kapcsolva), és tedd le a telefont kijelzővel lefelé egy sík felületre. A gyűrű egyszer felvillan.
 2. **Durva irány:** ha az észak a C2–C6 nagy ívek felé esik, az az ív ég.
 3. **Pontos irány:** forgasd a telefont, amíg az észak a C1 sávra kerül. Kis kattanás jelzi, és onnantól **egyetlen kis LED** mutatja pontosan az északot.
 4. Addig fut, amíg fekszik. Ha felemeled, még **5 mp-ig** vár: ha visszateszed, folytatja, különben kikapcsol.
@@ -206,7 +243,7 @@ jobs:
 ```mermaid
 flowchart LR
     subgraph Indítás
-        T1[Glyph Simon csempe]
+        T1[Glyph figyelés csempe]
         T2[Pörgetés csempe]
         T3[Iránytű csempe]
         APP[MainActivity]
@@ -227,7 +264,7 @@ flowchart LR
     SVC --> S[SpinWheel]
     SVC --> C[Compass<br/>forgásvektor-szenzor]
 
-    MD -- "2× jobbra forgatás" --> SVC
+    MD -- "indító mozdulat" --> SVC
     MD -- "dőlés, fekvés" --> G
     MD --> S
     MD --> C
@@ -256,9 +293,11 @@ stateDiagram-v2
     state "Pörgetés" as Spin
     state "Iránytű" as Compass
     [*] --> Idle
-    Idle --> Watch: Simon csempe BE
-    Watch --> Idle: Simon csempe KI
-    Watch --> Game: 2× jobbra forgatás
+    Idle --> Watch: figyelés BE
+    Watch --> Idle: figyelés KI
+    Watch --> Game: Simon mozdulata
+    Watch --> Spin: Pörgetés mozdulata
+    Watch --> Compass: Iránytű mozdulata
     Game --> Watch: vége
     Idle --> Spin: Pörgetés csempe
     Watch --> Spin: Pörgetés csempe
@@ -282,7 +321,7 @@ GlyphEggs/
 │       ├── AndroidManifest.xml
 │       ├── java/com/akos/glypheggs/
 │       │   ├── SimonService.kt               ← a központi szolgáltatás
-│       │   ├── MotionDetector.kt             ← szenzorok: dőlés, fekvés, forgatás
+│       │   ├── MotionDetector.kt             ← szenzorok + mozdulat-felismerés
 │       │   ├── GlyphController.kt            ← vékony réteg a GlyphManager körül
 │       │   ├── SimonGame.kt                  ← Simon Says játékmenet
 │       │   ├── SpinWheel.kt                  ← üvegpörgetés
@@ -294,7 +333,13 @@ GlyphEggs/
 │       │   ├── SpinTileService.kt            ← „Pörgetés” csempe
 │       │   ├── CompassTileService.kt         ← „Iránytű” csempe
 │       │   ├── TileStarter.kt                ← csempe → szolgáltatás indítás
-│       │   ├── MainActivity.kt               ← vezérlőképernyő + élő adatok
+│       │   ├── MainActivity.kt               ← főképernyő (Nothing-stílus)
+│       │   ├── GesturesActivity.kt           ← indító mozdulatok beállítása
+│       │   ├── SimulatorActivity.kt          ← LED-szimuláció a képernyőn
+│       │   ├── GlyphMapView.kt               ← a 33 zóna rajza (előnézet, szimuláció)
+│       │   ├── GlyphMirror.kt                ← mi ég éppen (a rajzok ebből dolgoznak)
+│       │   ├── Trigger.kt                    ← mozdulatok, funkciók, mentett beállítások
+│       │   ├── Ui.kt                         ← színek, kártyák, kapcsoló
 │       │   ├── BootReceiver.kt               ← újraindítás után visszakapcsol
 │       │   └── DebugState.kt                 ← állapot és napló a képernyőre
 │       └── res/
@@ -311,16 +356,22 @@ GlyphEggs/
 | Fájl | Feladat |
 |---|---|
 | **`SimonService`** | Előtérszolgáltatás (`foregroundServiceType="specialUse"`). Fogadja az `ACTION_WATCH_ON/OFF`, `ACTION_START_GAME`, `ACTION_SPIN`, `ACTION_COMPASS`, `ACTION_STOP` parancsokat. A `launchWithGlyph()` keret megnyitja a Glyph sessiont, lefuttatja a feladatot, majd mindig takarít. Frissíti az értesítést és a csempék állapotát (`watching`, `compassOn`). |
-| **`MotionDetector`** | Saját szálon (`HandlerThread`) olvassa a szenzorokat. Kiszűri a gravitációt (aluláteresztő szűrő), ebből adja a `tilt` (dőlés iránya) és a `faceDown` (kijelzővel lefelé fekszik-e) `StateFlow`-t. Készenlétben a giroszkóppal számolja a jobbra forgatásokat. Wake-lockkal ébren tartja a processzort, amíg kell. |
-| **`GlyphController`** | A `GlyphManager` csatlakoztatása, regisztráció (`DEVICE_22111`), session nyitás/zárás, `show(zónák)`, `off()`, `progress(%)`. Minden hívás védett: zárt sessionnél nem csinál semmit. |
+| **`MotionDetector`** | Saját szálon (`HandlerThread`) olvassa a szenzorokat. Kiszűri a gravitációt, ebből adja a `tilt` (dőlés) és a `faceDown` (fekszik-e) `StateFlow`-t. Készenlétben felismeri az indító mozdulatokat: forgatások, megpörgetés, kopogás, rázás, lefordítás. Csak a kiosztott mozdulatokhoz szükséges szenzorokat és mintavételt járatja. |
+| **`Trigger` / `Feature` / `Settings`** | A mozdulatok és funkciók listája, és a mentett beállítások (melyik mozdulat melyik funkcióé, rezgés, kopogás-érzékenység, figyelés, utolsó szint). |
+| **`GlyphMirror`** | Mindig tudja, melyik zóna ég és melyik funkció fut. A `GlyphController` minden kigyújtást ide is beír. |
+| **`GlyphMapView`** | A hátlap rajza mind a 33 zónával, világító / halvány állapottal, tükrözési lehetőséggel. |
+| **`GesturesActivity`** | Funkcióválasztó fülek, a mozdulatok listája kiválasztó jelölővel, kopogás-érzékenység, tippek. |
+| **`SimulatorActivity`** | Teljes képernyős LED-szimuláció; a gyorsulásmérő szerint tükröz, amíg nyitva van, a funkciók kijelzővel felfelé is indulnak. |
+| **`Ui`** | A Nothing-stílus elemei: színek, `FeatureCard`, `ToggleView`, kártyasorok, rendszersávok kezelése. |
+| **`GlyphController`** | A `GlyphManager` csatlakoztatása, regisztráció (`DEVICE_22111`), session nyitás/zárás, `show(zónák)`, `off()`. Minden kigyújtást a `GlyphMirror`-ba is beír; Glyph nélkül csak a tükörkép frissül, így a funkciók más telefonon is futnak. |
 | **`SimonGame`** | A játékmenet coroutine-ként: bevezető animáció → sor bővítése → lejátszás → válaszok várása `tilt.first { … }`-val, időkorláttal → szintlépés → győzelem/vereség animáció. |
 | **`SpinWheel`** | Szög alapú pörgetés lassuló (ease-out) mozgással, egyenletes eséllyel sorsolt célponttal. |
 | **`Compass`** | A forgásvektor-szenzorból kiszámolja, merre van az észak a hátlaphoz képest, és kigyújtja a megfelelő zónát. Felemelésnél türelmi idő. |
 | **`Direction` / `Zones`** | A négy dőlési irány és a hozzájuk tartozó LED-ek; `Zones.LEVEL` (C1, 16 LED) és `Zones.ALL` (mind a 33). |
 | **`Haptics`** | `tick()` indító jelzés, `click()` pörgetés-kattanás, `result()` megállás, `win()` ~8 mp-es győzelmi minta. |
-| **`*TileService`** | A három csempe. A Simon csempe kapcsoló (`TOGGLEABLE_TILE`), a másik kettő gomb. |
+| **`*TileService`** | A három csempe. A Glyph figyelés csempe kapcsoló (`TOGGLEABLE_TILE`), a másik kettő gomb. |
 | **`TileStarter`** | Csempéről indítja a szolgáltatást; ha a rendszer ezt tiltja, `startActivityAndCollapse`-szel megnyitja az appot. |
-| **`MainActivity`** | Egyszerű, kódból felépített felület: gombok, élő szenzoradatok, napló. Itt kérhető a csempék hozzáadása (`StatusBarManager.requestAddTileService`). |
+| **`MainActivity`** | A Nothing Glyph Interface beállításait idéző főképernyő: élő Glyph-előnézet, gyors kártyák, Mozdulatfigyelés sáv, mozdulat-kártyák, rezgés, csempék, háttérfutás, diagnosztika. A címre dupla koppintás → szimuláció. |
 | **`BootReceiver`** | Újraindítás után visszakapcsolja a Simon-figyelést, ha előtte be volt kapcsolva. |
 | **`DebugState`** | `StateFlow`-k az állapotnak, a szenzoradatoknak és az utolsó 15 naplósornak; a főképernyő ezeket mutatja élőben. |
 
@@ -341,16 +392,41 @@ A játék minden válasz előtt megvárja a „középen” állapotot, így egy
 </details>
 
 <details>
-<summary><b>Indító mozdulat: 2× jobbra forgatás</b></summary>
+<summary><b>Indító mozdulatok felismerése</b></summary>
 
-Csak akkor fut, ha a telefon kijelzővel lefelé fekszik (`g.z < −FLAT_Z`). A giroszkóp z-tengelyének szögsebességét időben összegzi (integrálja):
+**Forgatások és megpörgetés (giroszkóp, csak fekve).** A z-tengely szögsebességét „mozdulatokra” bontja: egy mozdulat akkor kezdődik, ha a szögsebesség meghaladja a `MOVE_START_RAD_S` értéket, és akkor zárul, ha `MOVE_END_MS` ideig a `MOVE_STOP_RAD_S` alatt marad. A mozdulat alatt összegzett szög alapján:
 
-- kijelzővel lefelé a felülről nézett óramutató-irányú forgatás pozitív z-szögsebességet ad;
-- a zajt (`|ω| < 0,15 rad/s`) eldobja; a balra forgatás nullázza a félkész forgatást;
-- egy forgatás akkor számít, ha eléri `TURN_DEGREES × TURN_TOLERANCE` értéket (≈ 68°);
-- a forgatások között legfeljebb `TURN_GAP_MS` telhet el, különben újrakezdi.
+- ≥ `SPIN_GESTURE_DEG` (300°) → **megpörgetés**;
+- `TURN_MIN_DEG`–`TURN_MAX_DEG` (55–200°) → egy **jobbra** vagy **balra** forgatás (előjel szerint);
+- két egymást követő forgatás (max. `TURN_GAP_MS` szünettel) adja a párt: JJ, BB, JB, BJ.
 
-A giroszkóp csak lefektetett telefonnál fut, készenlétben a gyorsulásmérő ~5 Hz-en, 1 mp-es kötegekben jár, ez kíméli az akkut.
+A forgásirány előjelét a gravitáció szerint fordítja, így felülről nézve az óramutató iránya mindig „jobbra”, akár lefelé, akár felfelé néz a kijelző.
+
+**Kopogás (gyorsulásmérő, 100 Hz, csak fekve).** A gravitációt kivonva a függőleges gyorsulás rövid csúcsait számolja (küszöb az érzékenység szerint, min. `KNOCK_MIN_GAP_MS` köztük). Ha `KNOCK_MAX_GAP_MS` ideig nincs újabb, a sorozat lezárul: 2 → *Kopogás 2×*, 3 → *Kopogás 3×*. Lerakás után `KNOCK_SETTLE_MS` ideig nem figyel, mert a lerakás is koppan.
+
+**Rázás.** Kézben `SHAKE_WINDOW_MS` időn belül legalább `SHAKE_PEAKS` erős csúcs → „megrázva”; ha utána `SHAKE_PLACE_MS` időn belül kijelzővel lefelé leteszed, indul.
+
+**Lefordítás 2×.** A stabil „kijelző felfelé” → „kijelző lefelé” átmeneteket számolja; kettő `FLIP_WINDOW_MS` időn belül.
+
+**Energiatakarékosság.** Csak azt méri, amire a kiosztott mozdulatokhoz szükség van: alapból ~5 Hz, 1 mp-es kötegekben; kopogáshoz fekve 100 Hz; rázáshoz/lefordításhoz kézben 50 Hz; a giroszkóp csak fekve és csak forgatós mozdulatnál fut. Az időzítés a szenzoresemények időbélyegéből számol, így a kötegelt adatküldésnél is pontos.
+</details>
+
+<details>
+<summary><b>Indító mozdulatok</b></summary>
+
+| Név | Alap | Jelentés |
+|---|---|---|
+| `TURN_MIN_DEG` / `TURN_MAX_DEG` | `55°` / `200°` | Ekkora forgatás számít „negyed fordulatnak” |
+| `SPIN_GESTURE_DEG` | `300°` | Ennyi egy lendületből = megpörgetés |
+| `TURN_GAP_MS` | `4000` | Max. szünet két forgatás között |
+| `INVERT_TURN` | `false` | Ha a jobbra és balra forgatás fordítva jön ki |
+| `KNOCK_THRESHOLDS` | `3.2 / 2.0 / 1.2` | Kopogás küszöbe (m/s²) alacsony / közepes / magas érzékenységnél |
+| `KNOCK_MAX_GAP_MS` | `600` | Ennyi szünet zárja le a kopogássorozatot |
+| `SHAKE_THRESHOLD` / `SHAKE_PEAKS` | `11` / `4` | Rázás erőssége és a csúcsok száma |
+| `SHAKE_PLACE_MS` | `6000` | Rázás után ennyi időd van letenni |
+| `FLIP_WINDOW_MS` | `5000` | A két lefordítás időablaka |
+| `GESTURE_COOLDOWN_MS` | `4000` | Egy mozdulat után ennyi ideig nem figyel újat |
+| `KEEP_AWAKE_MS` | `10 perc` | Lerakás/mozdítás után ennyi ideig ébren a forgatásfigyeléshez |
 </details>
 
 <details>
@@ -398,15 +474,29 @@ Minden hangolható érték egy helyen: `app/src/main/java/com/akos/glypheggs/Con
 | `FULL_SEQUENCE` | `true` | `true`: az egész sort kell végigdönteni · `false`: csak az újat |
 | `LEDS_PER_LEVEL` | `2` | Ennyi LED gyullad körönként a C1 szintjelzőn |
 | `MAX_ROUNDS` | `8` | 16 / `LEDS_PER_LEVEL` – ennyi kör a győzelemhez |
-| `TURN_COUNT` | `2` | Ennyi jobbra forgatás indítja a játékot |
-| `TURN_DEGREES` / `TURN_TOLERANCE` | `90°` / `0.75` | Egy forgatás mérete és a tűrés |
-| `TURN_GAP_MS` | `4000` | Max. szünet két forgatás között |
-| `INVERT_TURN` | `false` | Ha a jobbra forgatást nem számolja, de a balrát igen |
 | `TILT_ON` / `TILT_OFF` | `3.5` / `1.5` | Dőlés küszöbe és a „középen” határa (m/s²) |
 | `INVERT_X` / `INVERT_Y` | `false` | Ha a bal/jobb vagy fel/le fordítva jön ki |
 | `SHOW_MS` / `GAP_MS` | `300` / `150` | Lejátszás tempója |
 | `ANSWER_TIMEOUT_MS` | `7000` | Ennyi idő van egy válaszra |
 | `WIN_FLASH_MS` | `8000` | Győzelmi villogás hossza |
+</details>
+
+<details>
+<summary><b>Indító mozdulatok</b></summary>
+
+| Név | Alap | Jelentés |
+|---|---|---|
+| `TURN_MIN_DEG` / `TURN_MAX_DEG` | `55°` / `200°` | Ekkora forgatás számít „negyed fordulatnak” |
+| `SPIN_GESTURE_DEG` | `300°` | Ennyi egy lendületből = megpörgetés |
+| `TURN_GAP_MS` | `4000` | Max. szünet két forgatás között |
+| `INVERT_TURN` | `false` | Ha a jobbra és balra forgatás fordítva jön ki |
+| `KNOCK_THRESHOLDS` | `3.2 / 2.0 / 1.2` | Kopogás küszöbe (m/s²) alacsony / közepes / magas érzékenységnél |
+| `KNOCK_MAX_GAP_MS` | `600` | Ennyi szünet zárja le a kopogássorozatot |
+| `SHAKE_THRESHOLD` / `SHAKE_PEAKS` | `11` / `4` | Rázás erőssége és a csúcsok száma |
+| `SHAKE_PLACE_MS` | `6000` | Rázás után ennyi időd van letenni |
+| `FLIP_WINDOW_MS` | `5000` | A két lefordítás időablaka |
+| `GESTURE_COOLDOWN_MS` | `4000` | Egy mozdulat után ennyi ideig nem figyel újat |
+| `KEEP_AWAKE_MS` | `10 perc` | Lerakás/mozdítás után ennyi ideig ébren a forgatásfigyeléshez |
 </details>
 
 <details>
@@ -458,13 +548,15 @@ Az app **nem kér** internet-, hely-, kamera- vagy mikrofon-hozzáférést.
 | Tünet | Megoldás |
 |---|---|
 | Nem gyulladnak ki a LED-ek | Régebbi rendszeren add ki az `adb` parancsot (48 óránként lejár). A naplóban `openSession hiba` jelenik meg. |
-| A Simon nem indul a forgatásra | Nézd az élő adatoknál a „jobbra forgatás: x/2” számlálót. Ha balra forgatásra nő, állítsd `INVERT_TURN = true`-ra. |
+| Nem indul a mozdulatra | Ellenőrizd, hogy be van-e kapcsolva a **Mozdulatfigyelés**, és melyik mozdulat tartozik a funkcióhoz. A Diagnosztikában a „forgatás” sor mutatja a felismert forgatásokat (R = jobbra, L = balra). Ha fordítva jön ki, `INVERT_TURN = true`. |
+| Nem érzékeli a kopogást / magától indul | Indító mozdulatok → Kopogás érzékenysége: magasabb / alacsonyabb. Kopogtass a telefonon, ne az asztalon. |
+| Tesztelnéd más telefonon | Koppints kétszer a címre: a szimuláció Glyph nélkül is mutatja a LED-eket. |
 | Fordítva érzékeli a dőlést | `INVERT_X` / `INVERT_Y` |
 | Az iránytű tükrözve mutat | `COMPASS_INVERT = true` |
 | Az iránytű téved | Fém, laptop, hangszóró van a közelben. Emeld fel, és mozgasd párszor 8-as alakban. |
 | A háttérben leáll | Kapcsold ki az akkuoptimalizálást az appban. |
 | Furcsán viselkedik lefelé fordításkor | A Nothing **Flip to Glyph** funkciója ütközhet. Kapcsold ki a Glyph beállításokban. |
-| A csempe nem indít semmit | Az app ilyenkor magától megnyílik. Ha mégsem, indítsd az app gombjával. |
+| A csempe nem indít semmit | Az app ilyenkor magától megnyílik. Ha mégsem, indítsd az app kártyájával. |
 
 ---
 
@@ -472,6 +564,8 @@ Az app **nem kér** internet-, hely-, kamera- vagy mikrofon-hozzáférést.
 
 - Csak **Nothing Phone (2)**-re készült (`DEVICE_22111`). Más Nothing telefonokon más a zónakiosztás.
 - Amíg egy feladat fut, a rendszer saját Glyph-értesítései szünetelnek.
+- A kopogás figyelése sűrűbb mérést igényel, ezért valamivel több akkut fogyaszt, mint a forgatás.
+- Hosszú tétlenség után (`KEEP_AWAKE_MS`) a giroszkóp alvó processzornál nem kap adatot; ilyenkor egy kis mozdítás „felébreszti”.
 - A C2–C6 ívek pontos szöghatárait a Nothing nem dokumentálja, ezért becsültek. A sorrendjük biztos.
 - Az iránytű alapból a mágneses északot mutatja.
 
