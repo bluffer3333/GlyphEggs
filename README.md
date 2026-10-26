@@ -1,17 +1,18 @@
 <div align="center">
 
-<img src="glyph-eggs-logo.png" alt="Glyph Eggs logó" width="140" />
+<img src="glyph-eggs-logo.png" alt="Glyph Eggs logó" width="160" />
 
 # Glyph Eggs
 
 **Játékok és eszközök a Nothing Phone (2) hátoldali Glyph LED-jeire**
 
-Simon Says · Zárfeltörő · Glyph Tojás · Egyensúly · Dínófutás · Széf · Üvegpörgetés · Iránytű · Vízmérték · Időzítő — csempéről vagy saját mozdulattal
+Simon Says · Zárfeltörő · Glyph Tojás · Egyensúly · Dínófutás · Széf · Üvegpörgetés · Iránytű · Vízmérték · Időzítő — csempéről, widgetről vagy saját mozdulattal
 
 ![Platform](https://img.shields.io/badge/platform-Android%2014%2B-3DDC84?logo=android&logoColor=white)
 ![Kotlin](https://img.shields.io/badge/Kotlin-2.0-7F52FF?logo=kotlin&logoColor=white)
 ![Device](https://img.shields.io/badge/eszköz-Nothing%20Phone%20(2)-000000)
 ![Glyph SDK](https://img.shields.io/badge/Glyph%20Developer%20Kit-hivatalos-D71921)
+![Verzió](https://img.shields.io/badge/verzió-9.0-F2EFE6)
 ![Build](https://img.shields.io/badge/build-GitHub%20Actions-2088FF?logo=githubactions&logoColor=white)
 
 </div>
@@ -20,9 +21,12 @@ Simon Says · Zárfeltörő · Glyph Tojás · Egyensúly · Dínófutás · Sz�
 
 ## Tartalom
 
+- [Újdonságok](#újdonságok)
 - [Funkciók](#funkciók)
 - [Gyorsbeállítás-csempék](#gyorsbeállítás-csempék)
 - [Felület](#felület)
+- [Widgetek](#widgetek)
+- [Ikon](#ikon)
 - [Zárfeltörő](#-zárfeltörő)
 - [Egyensúly](#-egyensúly)
 - [Dínófutás](#-dínófutás)
@@ -46,6 +50,25 @@ Simon Says · Zárfeltörő · Glyph Tojás · Egyensúly · Dínófutás · Sz�
 
 ---
 
+## Újdonságok
+
+### 9.0 – új ikon
+- **Pontmátrixos logó**: a tojás a Nothing pöttyös (dot-matrix) stílusában, rajta a világító Glyph-minta és a piros E1 pont. Részletek: [Ikon](#ikon).
+- A kamera melletti **ferde LED (B1) iránya javítva** (`/`, ahogy a telefonon) – az ikonon és a LED-térképen is.
+- **Témás ikon** (Android 13+ „témás ikonok”): egyszínű pontmátrixos változat, a háttérképhez színeződik.
+- A **Glyph Tojás widget** is az új logót mutatja.
+
+### 8.0 – widgetek
+- Négy widget: **Gyorsindító sáv** (4 választható funkció + figyelés kapcsoló), **Egygombos funkció** (bármelyikhez, többször is), **Glyph Tojás** (állapot + gondozás az app megnyitása nélkül), **Időzítő** (élő visszaszámlálás).
+- Lerakáskor beállítható, később hosszú nyomással átkonfigurálható; az appból egy koppintással kitehető.
+
+### 7.0 és korábban
+- Új játékok: **Zárfeltörő** (édes-pont rezgéssel), **Glyph Tojás**, **Egyensúly**, **Dínófutás**; új eszközök: **Széf**, **Vízmérték** (bármilyen helyzetben), **Időzítő** (homokóra és más animációk, többféle fókusz-mód).
+- Fülekre rendezett, testreszabható Nothing-stílusú felület, „i” súgóoldalak, minden funkcióhoz gyorscsempe.
+- Programozható indító mozdulatok, köztük a **Hengerítés 3×**; a LED-szimuláció a Beállításokba költözött.
+
+---
+
 ## Funkciók
 
 | | Funkció | Röviden |
@@ -61,11 +84,12 @@ Simon Says · Zárfeltörő · Glyph Tojás · Egyensúly · Dínófutás · Sz�
 | ⏳ | **Időzítő** | Pomodoro és más fókusz-időzítők homokórás és más LED-animációkkal – nem kell a képernyőt nézni. |
 | 🧭 | **Iránytű** | Fekve mutatja az északot: durván a nagy íveken, pontosan egyetlen kis LED-del a C1 sávon. |
 | ✋ | **Indító mozdulatok** | Forgatás, megpörgetés, kopogás, rázás, lefordítás – bármelyik funkcióhoz bármelyik mozdulat. |
+| 🧩 | **Widgetek** | Gyorsindító sáv, egygombos funkció, Tojás-állapot és élő időzítő a kezdőképernyőn. |
 | 👁️ | **LED-szimuláció** | A képernyőn is látszik, mit csinálnak a LED-ek – akár Glyph nélküli telefonon is. |
 
 **Közös tulajdonságok**
 
-- Mindhárom indítható a **lehúzható gyorsbeállítás-menüből** csempével, és **saját indító mozdulattal** is.
+- Minden funkció indítható a **lehúzható gyorsbeállítás-menüből** csempével, **widgetről** és **saját indító mozdulattal** is.
 - **Nothing-stílusú felület**: ugyanaz a sötét, kártyás megjelenés, mint a telefon Glyph Interface beállításaiban, élő Glyph-előnézettel.
 - A telefon **kijelzővel lefelé** fekszik az asztalon, így a LED-ek felfelé néznek.
 - **Rezgéses visszajelzés**: indító jelzés, kattogó pörgetés, győzelmi rezgés.
@@ -86,6 +110,10 @@ Húzd le kétszer a felső menüt, koppints a ✏️ (szerkesztés) ikonra, és 
 | **Zárfeltörő** | Gomb / kapcsoló | Elindítja a játékot (le kell tenni kijelzővel lefelé). |
 | **Széf** | Gomb / kapcsoló | Elindítja a kódbevitelt. |
 | **Glyph Tojás** | Gomb / kapcsoló | A Tojás megjelenik a LED-eken, és kopogással gondozhatod. |
+| **Vízmérték** | Gomb / kapcsoló | Fekve, élére vagy töltőportra állítva mér. |
+| **Időzítő** | Gomb / kapcsoló | Elindítja a beállított fókusz-időzítőt. |
+| **Egyensúly** | Gomb / kapcsoló | Elindítja a játékot. |
+| **Dínófutás** | Gomb / kapcsoló | Elindítja a játékot – kopogással ugrasz. |
 
 > Minden funkciónál igaz: ha fut, ugyanaz a csempe (vagy mozdulat) leállítja.
 
@@ -105,6 +133,30 @@ A főképernyő a Nothing Glyph Interface stílusát követi: felül az élő Gl
 | **Beállítások** | Indító mozdulatok, Csempék (választható), Háttérfutás, Rezgés, LED-szimuláció, Diagnosztika |
 
 Minden funkció-kártyán van egy **„i” gomb**: részletes súgó arról, hogyan indul, hogyan kell használni, és mit jelentenek a LED-ek – onnan egy koppintással indítható, vagy beállítható az indító mozdulata.
+
+## Widgetek
+
+Négyféle widget tehető a kezdőképernyőre, mind Nothing-stílusban, és mind élőben követi, mi fut.
+Kitétel: **Beállítások → Widgetek** az appban, vagy hosszan nyomva a kezdőképernyőt → Widgetek → Glyph Eggs.
+
+| Widget | Méret | Tudja |
+|---|---|---|
+| **Gyorsindító sáv** | 4×2 (átméretezhető) | 4 választható funkció (lerakáskor választod, később hosszú nyomás → átkonfigurálás), a futó funkció világos gombbal; **Figyel** kapcsoló a mozdulatfigyeléshez; koppintás a futóra = leállítás |
+| **Egygombos funkció** | 1×1 | Bármelyik funkcióhoz, többször is kitehető; világít, amíg a funkció fut |
+| **Glyph Tojás** | 4×2 | A Tojás „portréja” a Glyph-rajzon a hangulata szerint, 4 állapotsáv (pirosan, ha alacsony), gyors gondozás: etetés, játék, simogatás, fürdetés – az app megnyitása nélkül |
+| **Időzítő** | 4×1 | Magától visszaszámol (a szakasz nevével), szünetnél megáll; Indítás / Leállítás gomb; koppintás = beállítások |
+
+<p align="center"><img src="docs/widgetek.png" alt="Glyph Eggs widgetek" width="420" /></p>
+
+## Ikon
+
+<p align="center"><img src="docs/ikon.png" alt="Glyph Eggs ikon" width="420" /></p>
+
+- **Pontmátrixos tojás**: a Nothing pöttyös betűtípusára és felületére utal; a pöttyök pontosan a tojás körvonalát követik.
+- Rajta a **Phone (2) hátlapjának Glyph-mintája** világítva: kameragyűrű (A), ferde csík (B1, `/` irányban), a nagy gyűrű szakaszokra bontva (C), a függőleges vonal (D1) és a **piros E1 pont**.
+- **Adaptív ikon**: fekete háttér + vektoros előtér, így bármilyen indítóikon-formában (kör, squircle, lekerekített négyzet) éles. A „fény” áttetsző vonalrétegekből áll, mert a vektoros ikonban nincs elmosás.
+- **Témás ikon**: egyszínű változat, amit az Android a háttérkép színeihez igazít.
+- Fájlok: `drawable/ic_launcher_foreground.xml`, `ic_launcher_background.xml`, `ic_launcher_monochrome.xml`; a README-logó: `glyph-eggs-logo.png` (256×256, átlátszó sarkok).
 
 ## 🔓 Zárfeltörő
 
@@ -237,6 +289,7 @@ A főképernyő **Mozdulatfigyelés** kapcsolójával (vagy a *Glyph figyelés* 
 | Kopogás 3× | Fekve háromszor gyorsan | – |
 | Rázás, majd lerakás | Rázd meg, és 6 mp-en belül tedd le kijelzővel lefelé | – |
 | Lefordítás 2× | Kijelzővel felfelé → lefelé, kétszer egymás után | – |
+| Hengerítés 3× | Két kézben, fekvő helyzetben magad előtt (töltőport a jobb kezed felé): 3-szor körbe a hosszanti tengely körül, mint egy sodrófát | – |
 | Nincs | Csak csempével vagy az appból indul | – |
 
 - **Bármelyik mozdulat bármelyik funkcióhoz** rendelhető – a Zárfeltörőhöz, a Széfhez és a Tojáshoz is (alapból ezeknek nincs). Egy mozdulat egyszerre csak egy funkcióhoz tartozhat: ha máshol már használtad, ott „Nincs” lesz.
@@ -245,7 +298,7 @@ A főképernyő **Mozdulatfigyelés** kapcsolójával (vagy a *Glyph figyelés* 
 
 ## LED-szimuláció
 
-**Koppints kétszer a „Glyph Eggs” címre** (vagy a Glyph-előnézetre): teljes képernyőn megjelenik a hátlap Glyph-rajza, és élőben mutatja, melyik LED ég.
+**Beállítások fül → LED-szimuláció** kártya (vagy gyorsan: **dupla koppintás a „Glyph Eggs” címre**): teljes képernyőn megjelenik a hátlap Glyph-rajza, és élőben mutatja, melyik LED ég.
 
 - Bármelyik telefonon működik. Glyph nélkül a funkciók „csak a képernyőn” futnak, így megmutathatod másnak is, hogyan működik.
 - Amíg a szimuláció nyitva van, a funkciók **kijelzővel felfelé** fekvő telefonnal is indulnak. Ilyenkor a rajz tükrözve jelenik meg, hogy minden LED a valódi helyén látsszon (a kamera felőli oldal ott, ahol a kamera van).
@@ -259,8 +312,8 @@ A Nothing Phone (2) hátlapján **33 külön vezérelhető zóna** van. Hátulr�
 
 ```
         ┌───────────────────────────┐
-        │  (A1)       B1 ╲          │   A1 / A2 – kamera körüli gyűrű (felső / alsó fél)
-        │  (A2)           ╲         │   B1      – ferde csík
+        │  (A1)      ╱ B1           │   A1 / A2 – kamera körüli gyűrű (felső / alsó fél)
+        │  (A2)    ╱                │   B1      – ferde csík
         │                           │
         │       C2  ╭─────╮ C1_16   │   C1_1…C1_16 – jobb felső ív, 16 kis LED
         │         ╱         ╲ …     │                (C1_16 felül, C1_1 a jobb szélen)
@@ -488,6 +541,8 @@ GlyphEggs/
 │       │   ├── BalanceGame.kt                ← Egyensúly játék
 │       │   ├── DinoGame.kt                   ← Dínófutás
 │       │   ├── InfoActivity.kt               ← részletes súgó minden funkcióhoz
+│       │   ├── Widgets.kt                    ← a 4 widget, frissítés, időzítő-állapot
+│       │   ├── WidgetConfigActivity.kt       ← widget beállítása lerakáskor
 │       │   ├── SpinWheel.kt                  ← üvegpörgetés
 │       │   ├── Compass.kt                    ← iránytű
 │       │   ├── Direction.kt                  ← irányok és LED-zónák
@@ -571,6 +626,8 @@ A forgásirány előjelét a gravitáció szerint fordítja, így felülről né
 **Rázás.** Kézben `SHAKE_WINDOW_MS` időn belül legalább `SHAKE_PEAKS` erős csúcs → „megrázva”; ha utána `SHAKE_PLACE_MS` időn belül kijelzővel lefelé leteszed, indul.
 
 **Lefordítás 2×.** A stabil „kijelző felfelé” → „kijelző lefelé” átmeneteket számolja; kettő `FLIP_WINDOW_MS` időn belül.
+
+**Hengerítés 3×.** Kézben mozgatva (`ROLL_WAKE_ACCEL`) a giroszkóp `ROLL_AWAKE_MS` időre bekapcsol, és a hosszanti (y) tengely körüli elfordulást összegzi egy `ROLL_WINDOW_MS` ablakban. Ha eléri a `ROLL_TURNS` × 360° × `ROLL_TOLERANCE` értéket (kb. 2,5 kör), indul. Bármelyik irányba jó; közben a lefordítást nem figyeli, mert a kijelző is átfordul.
 
 **Energiatakarékosság.** Csak azt méri, amire a kiosztott mozdulatokhoz szükség van: alapból ~5 Hz, 1 mp-es kötegekben; kopogáshoz fekve 100 Hz; rázáshoz/lefordításhoz kézben 50 Hz; a giroszkóp csak fekve és csak forgatós mozdulatnál fut. Az időzítés a szenzoresemények időbélyegéből számol, így a kötegelt adatküldésnél is pontos.
 </details>
