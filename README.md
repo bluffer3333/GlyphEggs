@@ -6,14 +6,14 @@
 
 **Játékok, eszközök, telefonkereső és hangasszisztens a Nothing Phone (2) hátoldali Glyph LED-jeire**
 
-Glyph Beacon · Asszisztens · Simon Says · Zárfeltörő · Glyph Tojás · Dínófutás · Fújós · Pörgetés · Iránytű · Széf · Vízmérték · Időzítő · Légzés · Előadás
+Glyph Beacon · AI-asszisztens · Stat és kitűzők · Simon Says · Zárfeltörő · Glyph Tojás · Dínófutás · Fújós · Pörgetés · Iránytű · Széf · Vízmérték · Időzítő · Légzés · Előadás
 — kártyáról, csempéről, widgetről, mozdulattal, füttyel, hanggal vagy órarend szerint
 
 ![Platform](https://img.shields.io/badge/platform-Android%2014%2B-3DDC84?logo=android&logoColor=white)
 ![Kotlin](https://img.shields.io/badge/Kotlin-2.0-7F52FF?logo=kotlin&logoColor=white)
 ![Device](https://img.shields.io/badge/eszköz-Nothing%20Phone%20(2)-000000)
 ![Glyph SDK](https://img.shields.io/badge/Glyph%20Developer%20Kit-hivatalos-D71921)
-![Verzió](https://img.shields.io/badge/verzió-12.0-F2EFE6)
+![Verzió](https://img.shields.io/badge/verzió-12.2-F2EFE6)
 ![Build](https://img.shields.io/badge/build-GitHub%20Actions-2088FF?logo=githubactions&logoColor=white)
 
 </div>
@@ -34,6 +34,7 @@ A Glyph Eggs a Nothing Phone (2) hátlapján lévő **33 Glyph LED-et** játékk
 - [Kiemelt: Glyph Beacon](#-glyph-beacon--fütyülj-a-telefon-felel) · [Asszisztens](#-asszisztens--kérdezz-hangosan)
 - [Játékok](#játékok) – [Simon](#-glyph-simon) · [Zárfeltörő](#-zárfeltörő) · [Glyph Tojás](#-glyph-tojás) · [Dínófutás](#-dínófutás) · [Fújós](#-fújós)
 - [Eszközök](#eszközök) – [Pörgetés](#-pörgetés) · [Iránytű](#-iránytű) · [Széf](#-széf) · [Vízmérték](#-vízmérték) · [Időzítő](#-időzítő) · [Légzés](#-légzés) · [Előadás](#-előadás)
+- [Stat fül és kitűzők](#-stat-fül-és-kitűzők)
 - [Indítás és leállítás](#indítás-és-leállítás)
 - [Csempék](#gyorsbeállítás-csempék) · [Widgetek](#widgetek)
 - [Az app felülete](#az-app-felülete) · [Értesítések](#értesítések) · [Akku fül](#akku-fül) · [LED-szimuláció](#led-szimuláció)
@@ -51,7 +52,7 @@ A Glyph Eggs a Nothing Phone (2) hátlapján lévő **33 Glyph LED-et** játékk
 | | Újdonság |
 |---|---|
 | 📡 | **Glyph Beacon**: telefonkereső füttyre. Egy fütty, és a telefon villog, teljes erővel rezeg, és robotos hangot ad. Betanítható a saját füttyödre. Fehér / alumínium oldal, kiemelve a Főoldalon. |
-| 🎙️ | **Asszisztens**: kérdezz hangosan, Claude válaszol, a telefon felolvassa. Közben a LED-ek „beszélnek”, 9 választható animációval. Gomb az appban és widget. |
+| 🎙️ | **Asszisztens**: beszélgess bármelyik AI-appal (Claude, ChatGPT, Gemini…, a saját fiókoddal, ingyen), és közben a LED-ek „beszélnek”, 9 választható animációval. Gomb az appban és widget. |
 | 🧩 | **Négy új widget**: **Vízmérték** (élő fok és buborék), **Pörgetés** (pontokból rakott, pörgő palack), **Homokóra** (Pomodoro), **Asszisztens**. |
 | 🔐 | **Széf döntéssel**: a kódot a telefon döntögetésével adod meg, mint a Simonban. A kód 3–8 lépés lehet. |
 | 🌬️ | **Légzés** az Egyensúly helyett: vezetett légzőgyakorlat a LED-eken, 5 ritmussal. |
@@ -76,7 +77,7 @@ A Glyph Eggs a Nothing Phone (2) hátlapján lévő **33 Glyph LED-et** játékk
    | kopogás 2× (fekve) | Iránytű |
    | rázás-töltés | Előadás |
 5. Tedd ki a **csempéket** (Beállítások → Csempék) és a **widgeteket** (Beállítások → Widgetek).
-6. Az **Asszisztens**hez add meg a Claude API-kulcsodat (Asszisztens oldal → fogaskerék).
+6. **Asszisztens**: tedd ki a widgetet, vagy koppints a Főoldalon a **●** gombra. Megnyílik a választott AI-app (alapból a Claude; a saját fiókoddal, ingyen), a LED-ek pedig a hangjára villognak.
 7. Bármelyik kártyán az **„i”** gomb részletes súgót nyit. A **LED-szimuláció** (Beállítások fül) a képernyőn is mutatja, mit csinálnak a LED-ek.
 
 ---
@@ -86,7 +87,8 @@ A Glyph Eggs a Nothing Phone (2) hátlapján lévő **33 Glyph LED-et** játékk
 | | Funkció | Röviden |
 |---|---|---|
 | 📡 | **Glyph Beacon** | Fütyülj, és a telefon felel: villog (radar, SOS, stroboszkóp), rezeg és szól. Betanítható. |
-| 🎙️ | **Asszisztens** | Hangos kérdés → Claude válasza felolvasva, a LED-ek a hangra villognak. |
+| 🎙️ | **Asszisztens** | Beszélgetés bármelyik AI-appal (Claude, ChatGPT, Gemini…), a saját fiókoddal; a LED-ek a hangjára villognak. |
+| 🏆 | **Stat és kitűzők** | Szint, ábrák, kiértékelés és 30 mozgó, pontmátrixos kitűző; widget is. |
 | 🎮 | **Glyph Simon** | Simon Says: a LED-ek mutatnak egy sort, te döntéssel ismétled. 8 kör, szintjelző a felső sávon. |
 | 🔓 | **Zárfeltörő** | A felső sávon csúszó fénynél akkor kopogj, amikor a rejtett édes ponton jár (a telefon rezzen). 4 tüske, 3 élet. |
 | 🥚 | **Glyph Tojás** | Tamagocsi a hátlapon: kikel, nő, eszik, játszik, alszik. Kopogással és rázással gondozod. |
@@ -145,9 +147,30 @@ Elhagytad a telefont a lakásban? **Fütyülj egyet**, és a Phone (2) megszóla
 
 ## 🎙️ Asszisztens – kérdezz hangosan
 
-Nyomd meg a gombot (Főoldal → **ASSZISZTENS** kártya, vagy az Asszisztens widget), mondd el a kérdésed magyarul, és **Claude válaszol**. A telefon felolvassa a választ, a hátlap LED-jei pedig a hangra villognak.
+Két módon működik. Az asszisztens oldal tetején választhatsz.
 
-**Beállítás**
+### AI app mód (alap) – bármelyik AI-appal, a saját fiókoddal, ingyenesen
+
+**Nem kell API-kulcs, és nincs extra költség.** A beszélgetés a telefonodon lévő **AI-appban** zajlik, a saját fiókoddal: **Claude, ChatGPT, Gemini, Copilot, Perplexity, Grok, DeepSeek, Le Chat, Meta AI** – vagy bármelyik más telepített app. A Glyph Eggs közben csak „hallgatja”, mikor szól a telefon, és a hátlap LED-jein animálja az AI hangját.
+
+1. Asszisztens oldal → **AI-APP → Váltás**: válaszd ki az appot. A telepített ismert AI-appok elöl vannak, a *Más app a telefonról…* alatt bármelyik app választható. Alapból a Claude.
+2. Főoldal → **ASSZISZTENS** kártya **●** gombja, vagy az **Asszisztens widget**, vagy az oldalon a **Beszélgetés: …** gomb.
+3. Bekapcsol a LED-követés, és megnyílik a választott app. Ha nincs telepítve, a Play Áruház nyílik meg.
+4. Az appban indítsd a **hangos beszélgetést** (Claude: hullám ikon; ChatGPT: hang mód; Gemini: Live).
+5. Amíg **az AI beszél**, a hátlap a választott **beszéd-animációval** villog a hangjára. Amíg **te beszélsz**, a kamera pislog.
+6. **5 perc csend** után magától leáll, de az oldalon vagy az értesítésben is leállíthatod.
+
+Ha az asszisztenst nem appként nyitod meg, hanem például a bekapcsoló gombbal vagy „Hey Google”-lel hívod elő (Gemini), használd a **Csak LED-követés** gombot: ez csak a fényeket kapcsolja be.
+
+Hogyan tudja, mikor beszél az AI? Az Android hangkimenetének erejét méri (`Visualizer`), így a LED-ek a valódi hanghoz igazodnak, szótagra pontosan. Ha a rendszer ezt nem engedi, akkor a lejátszások listájából tudja, hogy épp szól valami, és ilyenkor beszédszerű ütemre villog. A mikrofon-engedélyt ehhez a méréshez kéri; semmit nem rögzít és nem küld el. Közben **bármilyen** hangra reagál (zenére is), ezért csak addig fut, amíg be van kapcsolva.
+
+> Az AI-fiókodba a Glyph Eggs közvetlenül nem tud bejelentkezni. Erre egyik szolgáltatónál sincs hivatalos lehetőség, és a feltételeik általában nem engedik, hogy az előfizetést más appok használják. Ezért a beszélgetés az AI saját appjában marad, a Glyph Eggs csak a fényeket adja hozzá.
+
+### Saját API-kulcs mód (haladó, fizetős)
+
+Ebben a módban minden az appon belül történik: a telefon beszédfelismerője, Claude válasza és a felolvasás is. A LED-ek itt szótagra pontosan követik a beszédet, és a beszélgetés is látszik.
+
+**Beállítás (API mód)**
 
 1. Szerezz egy **Claude API-kulcsot** a [console.anthropic.com](https://console.anthropic.com) oldalon. Az API külön fizetős szolgáltatás, nem része a Claude-előfizetésnek.
 2. Asszisztens oldal → **fogaskerék** → illeszd be a kulcsot → **Mentés**.
@@ -374,6 +397,47 @@ Alapból a bekapcsoló gomb **nem** állítja le (hogy megnézhesd az órát); a
 
 ---
 
+## 🏆 Stat fül és kitűzők
+
+<p align="center"><img src="docs/kituzok.png" alt="Pontmátrixos, mozgó kitűzők" width="700" /></p>
+
+A **Stat** fülön minden látszik, amit a Glyph Eggs-szel csináltál. Minden adat a telefonon marad.
+
+| Rész | Mit mutat |
+|---|---|
+| **Játékos-szint** | XP-ből számolt szint és rang (Újonc → Felfedező → Haladó → Veterán → Fénymester → Glyph-legenda), pontsoros haladással. XP: indításonként 10, percenként 1, és a kitűzők fokozata szerint 50–500. |
+| **Számok** | Összes indítás, idő a fényben, napos sorozat, kitűzők száma |
+| **Az elmúlt 14 nap** | Pontoszlopos diagram naponként (ma piros), és a heti változás az előző héthez képest |
+| **Mikor játszol** | 24 órás pontsor: minél többet játszol egy órában, annál fényesebb; a csúcs piros |
+| **Kiértékelés** | Automatikus, vicces, de pontos megállapítások: kedvenc játék, mivel töltöd a legtöbb időt, éjjeli bagoly vagy korán kelő, rekordnap, Simon- és Dínó-rekord, leghosszabb sorozat, mit nem próbáltál még, melyik kitűző a legközelebbi |
+| **Mivel mennyit** | Funkciónként pontsor az idő arányával (az első piros) |
+| **Kitűzők** | Mind a 30 kitűző, mozgó pontmátrixos érmekkel; a még meg nem szerzetteknél a gyűrű a haladást mutatja. Koppints rá a részletekért |
+| **Játékonként** | Indítások, idő, utolsó játék, rekordok (Simon-szint, zár-tüskék, Dínó-rekord és átlag, kinyitott széf, kidurrantott lufi, a Tojás állapota…) és 14 napos mini-diagram |
+
+**Kitűzők.** Négy fokozat: **bronz**, **ezüst**, **arany** és **legendás** (piros, lüktető glóriával). Mindegyik egy 9×9 pontos ikon egy pontgyűrűben; a gyűrűn csillanás fut körbe, az ikonon átsöpör a fény.
+
+| Kitűzők | Feltétel |
+|---|---|
+| Első fény · Rendszeres · Glyph-függő · **Fénylegenda** | 1 / 25 / 100 / 500 indítás |
+| Egy óra fényben · Tíz óra ragyogás | 1 / 10 óra összesen |
+| Visszatérő · Heti rituálé | 3 / 7 egymást követő nap |
+| Éjjeli bagoly · Korán kelő | játék 0–4 / 5–7 óra között |
+| Emlékező · Simon mester | Simon 5. szint / mind a 8 kör |
+| Betörő | Zárfeltörő: mind a 4 tüske |
+| Futó · Meteor elől | Dínó: 50 / 150 pont |
+| Durr! · Szélgép | kidurrantott lufi / 20 Fújós játék |
+| Kikelt! · Felnevelő | a Tojás kikel / felnő |
+| Szerencsekerék · Kódtörő · Tökéletes vízszint | 25 pörgetés / kinyitott széf / 10× pont vízszintes |
+| Zen · Fókuszgép · Szorgalmas hallgató | 60 perc légzés / 5 óra időzítő / 10 előadás |
+| Megvagy! · Beszélgető | füttyel megtalált telefon / 10 AI-beszélgetés |
+| Mindenevő · Felfedező · **Gyűjtő** | minden játék / minden funkció / 20 kitűző |
+
+Új kitűzőnél értesítés jön (kikapcsolható: Beállítások → Értesítések → *Új kitűző*).
+
+**Kitűzők widget** (4×2): balra a kiemelt kitűző **mozog**: a kezdőképernyő hat képkockát pörget, így a csillanás körbefut. Koppintásra a következő megszerzett kitűzőre vált, amíg pedig nincs egy sem, a legközelebbi célt mutatja szürkén, haladással. Jobbra a neve, a fokozata, a szinted, a darabszám és az 5 legutóbbi kitűző; erre koppintva a Stat fül nyílik meg.
+
+---
+
 ## Indítás és leállítás
 
 **Beállítások fül → Indítás és leállítás.** A 12.0-ban átalakítottuk, hogy könnyebb legyen eligazodni:
@@ -429,7 +493,7 @@ Beállítások fül → **Csempék**: kiválasztod, és egyenként felkerülnek 
 
 ## Widgetek
 
-**Tizenegy widget**, Nothing-stílusban: fekete lap, kerek gombok, pontmátrixos feliratok és számok, **piros pötty, ha fut**. Kitétel: **Beállítások → Widgetek**, vagy a kezdőképernyőn hosszan nyomva → Widgetek → Glyph Eggs.
+**Tizenkét widget**, Nothing-stílusban: fekete lap, kerek gombok, pontmátrixos feliratok és számok, **piros pötty, ha fut**. Kitétel: **Beállítások → Widgetek**, vagy a kezdőképernyőn hosszan nyomva → Widgetek → Glyph Eggs.
 
 | Widget | Méret | Tudja |
 |---|---|---|
@@ -443,7 +507,8 @@ Beállítások fül → **Csempék**: kiválasztod, és egyenként felkerülnek 
 | **Iránytű** | 4×2 | **FIGYEL BE/KI**, START/STOP, irány fokban és égtájjal, iránytű-rózsa |
 | **Vízmérték** 🆕 | 2×2 | Koppintásra indul; élőben a **fok** és a **buborék** (fekve kör, élére állítva pontsor), vízszintesnél piros |
 | **Pörgetés** 🆕 | 2×2 | Koppintásra **pontokból rakott palack** pörög, és vele a LED-ek is; megállva „ITT ÁLLT MEG” |
-| **Asszisztens** 🆕 | 2×2 | Pontmátrixos mikrofon; koppintásra **azonnal hallgat**, és az utolsó választ mutatja |
+| **Asszisztens** 🆕 | 2×2 | Pontmátrixos mikrofon; koppintásra megnyitja a választott **AI-appot**, és bekapcsolja a LED-követést (API módban azonnal hallgat). Mutatja, mikor beszél az AI |
+| **Kitűzők** 🆕 | 4×2 | Mozgó kiemelt kitűző (koppintás = következő), szint, darabszám, az 5 legutóbbi (koppintás = Stat fül) |
 
 A pontmátrixos (Doto) feliratokat és rajzokat az app rajzolja képpé, így minden indítón egyformán jelennek meg. A Vízmérték és a Pörgetés widget futás közben kb. 3–12-szer frissül másodpercenként, az Előadás és a Homokóra percenként / 15 mp-enként.
 
@@ -460,8 +525,9 @@ A főképernyő a Nothing Glyph Interface stílusát követi: felül az élő Gl
 | **Főoldal** | Kiemelve: **GLYPH BEACON** (alumínium kártya, kapcsolóval) és **ASSZISZTENS** (egy koppintásra hallgat). Alatta a kitűzött funkciók – hosszú nyomással vagy a Testreszabás kártyával változtatható |
 | **Játékok** | Simon, Zárfeltörő, Glyph Tojás, Dínófutás, Fújós + Dínófutás beállítása, Fújásfigyelés kapcsoló |
 | **Eszközök** | Pörgetés, Iránytű, Széf, Vízmérték, Időzítő, Légzés, Előadás + a Széf, az Időzítő, az Előadás és a Légzés beállítása |
+| **Stat** | Szint, ábrák, kiértékelés, játékonkénti statisztika, kitűzők – lásd [fent](#-stat-fül-és-kitűzők) |
 | **Akku** | A fogyasztás – lásd lent |
-| **Beállítások** | Indítás és leállítás, Csempék, Háttérfutás, Rezgés, LED-szimuláció, Widgetek, Értesítések, Diagnosztika |
+| **Beáll.** (Beállítások) | Indítás és leállítás, Csempék, Háttérfutás, Rezgés, LED-szimuláció, Widgetek, Értesítések, Diagnosztika |
 
 Minden kártyán az **„i”** gomb részletes súgót nyit (indítás, használat, mit jelentenek a LED-ek), onnan indítható vagy beállítható a mozdulata.
 
@@ -596,7 +662,8 @@ jobs:
 | `FOREGROUND_SERVICE`, `…_SPECIAL_USE` | Háttérben futó figyelés állandó értesítéssel |
 | `FOREGROUND_SERVICE_MICROPHONE` | Glyph Beacon és fújásfigyelés: a mikrofon a háttérben csak így használható |
 | `RECORD_AUDIO` | Fújós (hangerő), Glyph Beacon (hangmagasság), Asszisztens (beszédfelismerés) |
-| `INTERNET` 🆕 | **Csak az Asszisztens**: a kérdés szövege a Claude API-hoz megy |
+| `INTERNET` 🆕 | **Csak az Asszisztens API-kulcs módja**: a kérdés szövege a Claude API-hoz megy |
+| `MODIFY_AUDIO_SETTINGS` 🆕 | AI app mód: a telefonon szóló hang erejének mérése |
 | `USE_EXACT_ALARM` | Az Előadás-órarend pontos ébresztője |
 | `POST_NOTIFICATIONS` | Az állandó értesítés, Tojás- és órarend-értesítések |
 | `WAKE_LOCK` | Kikapcsolt képernyőnél is fut a figyelés és az animáció |
@@ -608,7 +675,9 @@ jobs:
 **Adatvédelem**
 
 - A **Fújós** és a **Glyph Beacon** mikrofonja csak a hangerőt / a hangmagasságot számolja: semmit nem rögzít, nem ment és nem küld el.
-- Az **Asszisztens** az egyetlen funkció, ami internetet használ, és csak akkor, amikor kérdezel. A telefon beszédfelismerője (általában a Google szolgáltatása) alakítja szöveggé a hangod. A kérdés szövege, az aktuális beszélgetés és a pontos idő közvetlenül az **Anthropic API**-hoz megy (`api.anthropic.com`), a te kulcsoddal. Más szerverre nem megy semmi.
+- **AI app módban** a Glyph Eggs nem használ internetet, és nem lát bele a beszélgetésbe. Csak azt méri, milyen hangos a telefonon szóló hang; a beszélgetést az AI saját appja kezeli, a te fiókodban.
+- A **statisztika és a kitűzők** csak a telefonon tárolódnak.
+- Az **Asszisztens API-kulcs módja** az egyetlen funkció, ami internetet használ, és csak akkor, amikor kérdezel. A telefon beszédfelismerője (általában a Google szolgáltatása) alakítja szöveggé a hangod. A kérdés szövege, az aktuális beszélgetés és a pontos idő közvetlenül az **Anthropic API**-hoz megy (`api.anthropic.com`), a te kulcsoddal. Más szerverre nem megy semmi.
 - Az **API-kulcs** csak a telefonon, az app saját beállításai között tárolódik (titkosítás nélkül, ahogy a legtöbb app-beállítás). Ha elveszted a telefont, a kulcsot a console.anthropic.com oldalon tudod visszavonni.
 - Az app nem kér hely- vagy kamera-hozzáférést; minden más adat a telefonon marad.
 
@@ -622,7 +691,9 @@ jobs:
 | A **Beacon** nem szól füttyre | Be van-e kapcsolva, és a kártyán **FIGYEL** áll? Újraindítás után nyisd meg egyszer az appot. Tanítsd be a füttyöd, vagy állíts *Érzékeny*re. Fütyülj hosszabban (fél–egy mp). |
 | A **Beacon** magától megszólal | Állíts *Óvatos*ra, és tanítsd be a füttyöd – akkor csak arra a hangmagasságra felel. |
 | A Beacon néma | Ne zavarjanak mód tilthatja az ébresztőket. A *Teljes hangerő* kapcsoló legyen bekapcsolva. |
-| Az **Asszisztens** nem válaszol | Ellenőrizd az API-kulcsot és az internetet. A hibaüzenet a beszélgetésben látszik (401 = hibás kulcs, 429 = keret / túl sok kérés). |
+| AI módban nem villognak a LED-ek | Engedélyezd a mikrofont (csak a hangerő méréséhez kell). Ha más funkció fut, az foglalja a LED-eket. Ellenőrizd, hogy az AI-app hangmódja szól-e. |
+| AI módban zenére is villog | Ez várható: a mód minden hangra reagál, amíg be van kapcsolva. Állítsd le az asszisztens oldalon vagy az értesítésben. |
+| Az **Asszisztens** (API mód) nem válaszol | Ellenőrizd az API-kulcsot és az internetet. A hibaüzenet a beszélgetésben látszik (401 = hibás kulcs, 429 = keret / túl sok kérés). |
 | Az Asszisztens nem beszél / angolul beszél | Tölts le magyar felolvasó hangot (Rendszer → Nyelvek → Szövegfelolvasás). |
 | „Nincs elérhető beszédfelismerő” | Telepítsd / frissítsd a Google appot vagy a *Speech Services by Google*-t. |
 | Nem indul a mozdulatra | Be van-e kapcsolva a **Mozdulatfigyelés**, és melyik mozdulat tartozik a funkcióhoz? (Indítás és leállítás → áttekintés) |
@@ -643,7 +714,9 @@ jobs:
 - Amíg egy funkció fut, a rendszer saját Glyph-értesítései szünetelnek.
 - A háttérbeli mikrofon (Beacon, fújásfigyelés) csak az app megnyitása után indulhat el; újraindítás után nem kapcsol vissza magától. Folyamatosan fut (zöld pötty), és fogyaszt.
 - A Beacon a fütyülést hangmagasság alapján ismeri fel. Nagyon zajos helyen, zárt táskában vagy messziről nem biztos, hogy meghallja; madárcsicsergés, sípolás ritkán megtévesztheti.
-- Az Asszisztens internetet, Claude API-kulcsot (fizetős) és a telefon beszédfelismerőjét igényli; a LED-ek a szótagokat követik, nem a valódi hanghullámot.
+- AI app módban a LED-ek minden, a telefonon szóló hangra reagálnak; ha a rendszer nem engedi a hangkimenet mérését, csak ütemre villognak. Az AI-app hangmódját nem tudja magától elindítani, ahhoz egy koppintás kell az appban.
+- A statisztika a 12.2-es verziótól gyűlik; a korábbi játékokból csak a meglévő rekordokat (Dínó, lufi, Tojás) látja.
+- Az API-kulcs mód internetet, fizetős Claude API-kulcsot és a telefon beszédfelismerőjét igényli.
 - A hangerő-gombok a háttérben nem olvashatók közvetlenül: az indítás a hangerő-változásból, a Dínó ugrása médiamunkamenetből működik (kísérleti).
 - Az iránytű a mágneses északot mutatja; a C2–C6 ívek pontos szöghatárai becsültek.
 
@@ -701,6 +774,9 @@ flowchart LR
 | `Beacon.kt` | `Whistle` (FFT-s füttyfelismerő), `MicTap`, `BeaconAlarm` (radar / SOS / strobe, rezgés, hang), `BeaconSound` |
 | `BeaconActivity.kt` | A Glyph Beacon alumínium oldala, `BeaconRadarView`, a Főoldal kiemelt kártyája |
 | `Assistant.kt` | `ClaudeClient` (Messages API), `TalkBus`, `TalkGlyph` (9 beszéd-animáció), `TalkAnim`, `AssistantModel` |
+| `ClaudeVoice.kt` | AI app mód: `KnownAi` (ismert AI-appok), `ClaudeLink` (a választott app megnyitása), `SoundFollower` (Visualizer + lejátszás-figyelés), `ClaudeLaunchActivity` |
+| `Stats.kt` | `GameStats` (indítások, idő, napok, órák, rekordok, sorozat, XP és szint), `Badge` (30 kitűző), `Achievements`, `BadgeArt` (a mozgó érmek rajza), `BadgeView` |
+| `StatsPage.kt` | A Stat fül: pontos diagramok (`DotColumns`, `HourDots`, `DotLine`), kiértékelés, kitűzőrács |
 | `AssistantActivity.kt` | Beszédfelismerés (hu-HU), felolvasás szótag-szinkronnal, beszélgetés, beállítások |
 | `MotionDetector.kt` | Szenzorok, mozdulat-felismerés, játék közbeni kopogás / rázás / dőlés |
 | `GlyphController.kt`, `GlyphMirror.kt`, `GlyphMapView.kt` | LED-vezérlés, a képernyős tükörkép és a hátlap rajza |
@@ -709,7 +785,7 @@ flowchart LR
 | `SimonGame`, `LockPick`, `PetSession`/`Pet`, `DinoGame`, `BlowGame` | A játékok |
 | `SpinWheel`, `Compass`, `SafeLock`, `LevelTool`, `FocusTimer`, `BreathGuide`, `LectureTimer` | Az eszközök |
 | `ShakeFill.kt`, `LectureSchedule.kt`, `EnergyMeter.kt`, `VolumeKeys.kt` | Rázás-töltés, órarend, fogyasztásmérés, hangerő-gombok |
-| `Widgets.kt`, `WidgetsExtra.kt` | A 11 widget, pontmátrix-szöveg és -rajzok; `TimerState`, `LectureState`, `CompassState`, `LevelState`, `SpinState`, `AssistantState` |
+| `Widgets.kt`, `WidgetsExtra.kt` | A 12 widget, pontmátrix-szöveg és -rajzok; `TimerState`, `LectureState`, `CompassState`, `LevelState`, `SpinState`, `AssistantState` |
 | `GesturesActivity.kt` | Indítás és leállítás: áttekintés → funkció (Indítás / Leállítás) → Érzékenység |
 | `MainActivity`, `InfoActivity`, `SafeActivity`, `BreathActivity`, `LectureActivity`, `BlowActivity`, `DinoActivity`, `TimerActivity`, `PetActivity`, `SimulatorActivity` | Az app többi oldala |
 | `res/raw/beacon_*.wav` | A Beacon saját, szintetizált hangjai (Robot, Szonár, Glyph, megerősítő csippanás) |
@@ -756,6 +832,8 @@ flowchart LR
 
 | Verzió | Újdonság |
 |---|---|
+| **12.2** | **Bármelyik AI-app** az AI módhoz (ChatGPT, Gemini, Copilot, Perplexity…); új **Stat** fül szinttel, ábrákkal, kiértékeléssel; **30 kitűző** mozgó pontmátrixos érmekkel; **Kitűzők widget** |
+| **12.1** | Asszisztens **Claude app módban**: a saját fiókoddal, API-kulcs és költség nélkül; a LED-ek a Claude app hangját követik |
 | **12.0** | **Glyph Beacon** (füttyre megtalálható telefon), **Asszisztens** (Claude, felolvasás, 9 beszéd-animáció), Vízmérték / Pörgetés / Homokóra / Asszisztens widget, Széf döntéssel, **Légzés** az Egyensúly helyett, új Indítás és leállítás oldal, érzékenyebb kopogás és fújás, könnyebb Dínó |
 | 11.5 | Minden értesítés kikapcsolható / elrejthető |
 | 11.4 | A fújásfigyelés a Mozdulatfigyeléssel együtt kapcsol be és ki |
