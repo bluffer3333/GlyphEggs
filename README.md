@@ -6,14 +6,14 @@
 
 **Játékok, eszközök, telefonkereső és hangasszisztens a Nothing Phone (2) hátoldali Glyph LED-jeire**
 
-Glyph Beacon · AI-asszisztens · Stat és kitűzők · Simon Says · Zárfeltörő · Glyph Tojás · Dínófutás · Fújós · Pörgetés · Iránytű · Széf · Vízmérték · Időzítő · Légzés · Előadás
+Glyph Beacon · AI-asszisztens · Stat és kitűzők · Csendzóna · Glyph Stúdió · Morze · Simon Says · Zárfeltörő · Glyph Tojás · Dínófutás · Fújós · Pörgetés · Iránytű · Széf · Vízmérték · Időzítő · Légzés · Előadás
 — kártyáról, csempéről, widgetről, mozdulattal, füttyel, hanggal vagy órarend szerint
 
 ![Platform](https://img.shields.io/badge/platform-Android%2014%2B-3DDC84?logo=android&logoColor=white)
 ![Kotlin](https://img.shields.io/badge/Kotlin-2.0-7F52FF?logo=kotlin&logoColor=white)
 ![Device](https://img.shields.io/badge/eszköz-Nothing%20Phone%20(2)-000000)
 ![Glyph SDK](https://img.shields.io/badge/Glyph%20Developer%20Kit-hivatalos-D71921)
-![Verzió](https://img.shields.io/badge/verzió-12.4-F2EFE6)
+![Verzió](https://img.shields.io/badge/verzió-12.6-F2EFE6)
 ![Build](https://img.shields.io/badge/build-GitHub%20Actions-2088FF?logo=githubactions&logoColor=white)
 
 </div>
@@ -23,7 +23,7 @@ Glyph Beacon · AI-asszisztens · Stat és kitűzők · Simon Says · Zárfeltö
 A Glyph Eggs a Nothing Phone (2) hátlapján lévő **33 Glyph LED-et** játékká és hasznos eszközzé teszi. A telefon többnyire kijelzővel lefelé fekszik az asztalon, a LED-ek felfelé néznek – nem kell a képernyőt nézned. Mozdulatokkal (forgatás, kopogás, rázás, döntés, fújás, hangerő-gombok), **füttyel**, **hanggal**, csempékkel, widgetekkel vagy heti órarend szerint indítod. A hivatalos **Nothing Glyph Developer Kit**-re épül: nincs root, nincs trükközés.
 
 <p align="center">
-  <img src="widgetek-12.png" alt="Az új widgetek: Vízmérték, Pörgetés, Homokóra, Asszisztens" width="640" />
+  <img src="docs/widgetek-12.png" alt="Az új widgetek: Vízmérték, Pörgetés, Homokóra, Asszisztens" width="640" />
 </p>
 
 ## Tartalom
@@ -370,6 +370,73 @@ Az Egyensúly helyére került: **vezetett légzőgyakorlat** a hátlapon. Fekve
 
 Hossz: **1 · 3 · 5 · 10 · 15 · 20 perc** (Eszközök → *Légzés beállítása*).
 
+### 🌙 Csendzóna (telefon-böjt)
+
+Tedd le a telefont kijelzővel lefelé, és **amíg hozzá sem érsz, a hátlapon nő a fény**: alulról, a töltőport felől felfelé, LED-enként. A cél idejére mind a 33 LED ég. Ha felveszed vagy megfordítod, a sorozat megszakad, és az eredmény bekerül a statisztikába.
+
+1. Indítsd (kártya, csempe, widget, mozdulat, Csendzóna oldal), és 20 mp-en belül tedd le kijelzővel lefelé.
+2. Amíg nyugton marad, gyűlnek a percek. A cél elérésekor ünnepi villogás és rezgés jön, utána tovább számol.
+3. Felvételkor vagy megfordításkor leáll, és megmutatja, meddig bírtad. A bekapcsoló gomb is leállítja, a megszerzett percek akkor is megmaradnak.
+
+**Csendzóna beállítása** (Eszközök fül): **cél** 15 / 30 / 60 / 90 perc, 2 / 3 óra; **mutatás**: *Percenként felvillan* (sötét, csak percenként egy pillanatra mutatja a haladást – akkubarát), *Mindig látszik*, *Teljes sötét* (csak a végén derül ki). Az oldal tetején a rekordok: leghosszabb csend, teljesített célok, összes idő.
+
+**Statisztika és kitűzők**: a Stat fülön külön sor: leghosszabb csend, teljesített és megszakított alkalmak, 14 napos diagram. Öt saját kitűzője van:
+
+| Kitűző | Feltétel |
+|---|---|
+| Első csend | 10 perc egyhuzamban |
+| Lekapcsolva | 60 perc egyhuzamban |
+| Fegyelem | 10 teljesített cél |
+| Remete | 3 óra egyhuzamban |
+| Csendmester | 10 óra összesen |
+
+🍃 **Mind az 5 Csendzóna-kitűzővel feloldódik a Zen téma** a titkos menüben – lásd lent.
+
+### 📡 Morze-gyakorló
+
+A hátlap **felső sávján (C1, 16 LED) balra fut egy rövid, hasznos szó morzekódja**: a **pont 1 LED**, a **vonás 3 LED**. A jelek között 1, a betűk között 3 sötét LED van. A függőleges vonal annyi LED-del ég, ahány betűs a szó, és új szó előtt az alsó pont felvillan.
+
+1. Indítsd (kártya, csempe, **widget**, mozdulat, hangerő-kombináció). A kód **először egyszer fut végig**.
+2. Utána **magától megjelenik a billentyűzet** a Morze oldalon (ha nem volt nyitva, megnyílik), és rögtön írhatod a megfejtést.
+3. Ha **8 mp-en belül** nincs meg, a kód **folyamatosan ismétlődik**, amíg el nem találod, vagy le nem állítod. *Megoldás* gomb: feladod, és megmutatja a szót.
+4. Helyes válasznál fényshow és rezgés jön, aztán a következő szó.
+
+| Beállítás | Választható |
+|---|---|
+| Nehézség | **Könnyű** (SOS, OK, NEM, MA…), **Közepes** (IGEN, SZIA, HAZA, MOST…), **Nehéz** (RADIO, HOTEL, TELEFON, MAYDAY…), **Vegyes** |
+| Tempó | Lassú · Közepes · Gyors |
+| Morze-ABC | beépített táblázat a tanuláshoz |
+
+Kézben használod, ezért a felemelés és a megfordítás nem állítja le, és alapból a bekapcsoló gomb sem.
+
+**Statisztika** (a Morze oldalon és a Stat fülön): megfejtett szavak, pontosság, legjobb hibátlan sorozat, átlagos megfejtési idő, 8 mp-en belüli megfejtések, összes betű, rossz tippek és feladások.
+
+**Kitűzők:**
+
+| Kitűző | Feltétel |
+|---|---|
+| Első jel | az első megfejtett szó |
+| Gyorsfülű | 10 szó az első 8 mp-en belül |
+| Rádiós | 25 megfejtett szó |
+| Hibátlan adás | 10 szó egymás után hiba nélkül |
+| Távírász | 100 megfejtett szó |
+
+📡 **Mind az 5 Morze-kitűzővel feloldódik a Távíró téma** a titkos menüben: borostyán képcső, a háttérben halvány pont-vonás sorok (valódi morzeszavak), képcső-csíkozás.
+
+**Morze widget** (4×1): koppintásra indul a gyakorlás, és megnyílik a megfejtő oldal. Futás közben a widget a **mostani szó kódját** mutatja pont-vonásban (a szót nem), így a kezdőképernyőről is megfejtheted. Alatta a megfejtések száma, a legjobb sorozat és a pontosság.
+
+### 🎨 Glyph Stúdió
+
+Saját LED-animációk rajzolása, képkockánként.
+
+- **Rajzolás:** a hátlap képén koppints egy fényre a be- vagy kikapcsolásához, vagy húzd végig az ujjad (festés / radír). Gyors gombok: *Mind be*, *Mind ki*, *Fordít*.
+- **Képkockák:** alul szalag a kis előnézetekkel; *+ Új*, *Másolat*, áthelyezés (◀ ▶), törlés (✕). Minden képkockának saját hossza van (− / +), és van *Mindre ugyanennyi*, *Gyorsabb ×½*, *Lassabb ×2*.
+- **Ismétlés:** 1×, 2×, 3×, 5× vagy végtelen (∞).
+- **Lejátszás:** előnézet a képernyőn, és *✦ Lejátszás a hátlapon*.
+- **Sablonok** kiindulásnak: Körbefutó, Szívverés, Töltés, Villogó, Pislogó szem, Eső, Ping-pong, vagy üres lappal.
+- Több animáció is menthető; az egyik a **★ kedvenc**. A Glyph Stúdió funkció (kártya, csempe, widget, **mozdulat** vagy **hangerő-kombináció**) ezt játssza le, így bármelyik indító mozdulathoz saját animációt köthetsz.
+- Kitűző jár érte: **Fényrendező** – az első saját animáció.
+
 ### 🎓 Előadás
 
 Egyetemi előadáshoz: a LED-ekről leolvasod, mennyi van még hátra. Alapból **2 × 45 perc**, köztük **15 perc szünet**.
@@ -399,7 +466,7 @@ Alapból a bekapcsoló gomb **nem** állítja le (hogy megnézhesd az órát); a
 
 ## 🏆 Stat fül és kitűzők
 
-<p align="center"><img src="kituzok.png" alt="Pontmátrixos, mozgó kitűzők" width="700" /></p>
+<p align="center"><img src="docs/kituzok.png" alt="Pontmátrixos, mozgó kitűzők" width="700" /></p>
 
 A **Stat** fülön minden látszik, amit a Glyph Eggs-szel csináltál. Minden adat a telefonon marad.
 
@@ -411,7 +478,7 @@ A **Stat** fülön minden látszik, amit a Glyph Eggs-szel csináltál. Minden a
 | **Mikor játszol** | 24 órás pontsor: minél többet játszol egy órában, annál fényesebb; a csúcs piros |
 | **Kiértékelés** | Automatikus, vicces, de pontos megállapítások: kedvenc játék, mivel töltöd a legtöbb időt, éjjeli bagoly vagy korán kelő, rekordnap, Simon- és Dínó-rekord, leghosszabb sorozat, mit nem próbáltál még, melyik kitűző a legközelebbi |
 | **Mivel mennyit** | Funkciónként pontsor az idő arányával (az első piros) |
-| **Kitűzők** | Mind a 30 kitűző, mozgó pontmátrixos érmekkel; a még meg nem szerzetteknél a gyűrű a haladást mutatja. Koppints rá a részletekért |
+| **Kitűzők** | Mind a 41 kitűző, mozgó pontmátrixos érmekkel; a még meg nem szerzetteknél a gyűrű a haladást mutatja. Koppints rá a részletekért |
 | **Játékonként** | Indítások, idő, utolsó játék, rekordok (Simon-szint, zár-tüskék, Dínó-rekord és átlag, kinyitott széf, kidurrantott lufi, a Tojás állapota…) és 14 napos mini-diagram |
 
 **Kitűzők.** Négy fokozat: **bronz**, **ezüst**, **arany** és **legendás** (piros, lüktető glóriával). Mindegyik egy 9×9 pontos ikon egy pontgyűrűben; a gyűrűn csillanás fut körbe, az ikonon átsöpör a fény.
@@ -449,15 +516,19 @@ Az app elején nem látszik. Amikor megvan a **2. kitűződ**, értesítés jön
 | **Ultraviolet** | Nothing-piros × UV-lila derengés | 11 |
 | **Vaporwave** | pasztell neon, menta × rózsa | 14 |
 | **Arcade RGB** | szivárvány, minden kártya más színű | 18 |
-| **C0RRUPTED** 🏴 | glitch: sérült textúrák, szakadó képernyő, RGB-csúszás | **mind a 30** |
+| **Zen** 🍃 | minimalista: tusfekete, papírszín és moha, halvány ensō-kör és gereblyézett homok, semmi izzás | **az 5 Csendzóna-kitűző** |
+| **Távíró** 📡 | borostyán képcső, pont-vonás minta | **az 5 Morze-kitűző** |
+| **C0RRUPTED** 🏴 | glitch: sérült textúrák, szakadó képernyő, RGB-csúszás | **mind** (az összes kitűző) |
 
 A téma az egész appra érvényes: díszített háttér, neon szegélyű kártyák, izzó pontmátrixos címek és **színes hátlap-kép**. A widgetek maradnak Nothing-feketék. Bármikor visszaállítható az alap *Nothing* téma.
 
-<p align="center"><img src="neon-temak.png" alt="A neon témák" width="760" /></p>
+<p align="center"><img src="docs/neon-temak.png" alt="A neon témák" width="760" /></p>
 
-**C0RRUPTED – az utolsó, a legnehezebb.** Csak az kapja meg, aki **mind a 30 kitűzőt** összegyűjtötte, a Fénylegendát (500 indítás) és a Gyűjtőt is. A téma „sérült”: a háttéren pixelblokkok, zaj és színes szakadásvonalak vannak, minden felirat piros RGB-szellemképet kap. Időnként, véletlenszerűen pár képkockányi kitörés jön, ilyenkor a kártyák megrándulnak és elcsúsznak, a képernyőn cián és piros szakadások futnak át. Utána minden visszaáll, mintha mi sem történt volna.
+**C0RRUPTED – az utolsó, a legnehezebb.** Csak az kapja meg, aki **az összes (41) kitűzőt** összegyűjtötte, a Fénylegendát (500 indítás) és a Gyűjtőt is. A téma „sérült”: a háttéren pixelblokkok, zaj és színes szakadásvonalak vannak, minden felirat piros RGB-szellemképet kap. Időnként, véletlenszerűen pár képkockányi kitörés jön, ilyenkor a kártyák megrándulnak és elcsúsznak, a képernyőn cián és piros szakadások futnak át. Utána minden visszaáll, mintha mi sem történt volna.
 
-<p align="center"><img src="glitch.png" alt="C0RRUPTED glitch téma" width="300" /></p>
+<p align="center"><img src="docs/glitch.png" alt="C0RRUPTED glitch téma" width="300" /> &nbsp; <img src="docs/zen.png" alt="Zen téma" width="300" /> &nbsp; <img src="docs/taviro.png" alt="Távíró téma" width="300" /></p>
+
+**Zen** – a Csendzóna jutalma. Nem a kitűzők számán múlik, hanem azon, hogy mind az **5 Csendzóna-kitűző** megvan-e. Csendes, minimalista téma: sötét tus-háttér, papírszínű betűk, mohazöld kiemelés, halvány ecsetvonásos ensō-kör és gereblyézett homok hullámai az alján, izzás és neon nélkül.
 
 <details>
 <summary><b>Spoiler: a titkos gomb</b></summary>
@@ -494,9 +565,11 @@ A funkciók saját oldaláról (Fújós, Dínó, Széf, Előadás, súgó) egyen
 | Lefordítás 2× | Kijelzővel felfelé → lefelé, kétszer | – |
 | Hengerítés 3× | Két kézben, fekvő helyzetben 3-szor körbe a hosszanti tengely körül | – |
 | **Hangerő fel 2× / le 2×** | Két gyors nyomás 1 mp-en belül; a hangerő utána visszaáll. Bekapcsolt (zárolt) képernyőnél megy, kikapcsoltnál csak, ha szól valami | – |
+| **Hangerő-kombináció** 🆕 | **Saját sorrend** a hangerő-gombokkal (pl. ▲▲▼, ▼▲▼▲), legfeljebb 8 nyomás. **Funkciónként más-más** kombináció lehet, így több funkció is indulhat hangerő-gombokkal. Két nyomás között legfeljebb 1,2 mp telhet el; a sorozat után kb. 0,7 mp szünet, és indul. A hangerő visszaáll | – |
 | Nincs | Csak kártyáról, csempéről, widgetről | – |
 
-- Bármelyik mozdulat bármelyik funkcióhoz rendelhető; egy mozdulat egyszerre csak egy funkcióhoz tartozhat.
+- Bármelyik mozdulat bármelyik funkcióhoz rendelhető; egy mozdulat egyszerre csak egy funkcióhoz tartozhat. Kivétel a **Hangerő-kombináció**: azt több funkció is használhatja, mindegyik a saját sorrendjével.
+- **A kombináció beállítása:** Indítás és leállítás → funkció → *Hangerő-kombináció*. A szerkesztőben a **▲ Fel** és **▼ Le** gombokkal rakod össze (⌫ törli az utolsót), vagy a *Rögzítés a valódi gombokkal* módban egyszerűen megnyomod a telefon gombjait. Ha ugyanaz a sorrend már egy másik funkcióé, figyelmeztet.
 - Felismeréskor rövid rezgés jelez; egy mozdulat után 4 mp-ig nem figyel újat.
 - A **Glyph Beacon** (fütty) és a **fújásfigyelés** külön kapcsolóval működik.
 
@@ -522,7 +595,7 @@ Beállítások fül → **Csempék**: kiválasztod, és egyenként felkerülnek 
 
 ## Widgetek
 
-**Tizenkét widget**, Nothing-stílusban: fekete lap, kerek gombok, pontmátrixos feliratok és számok, **piros pötty, ha fut**. Kitétel: **Beállítások → Widgetek**, vagy a kezdőképernyőn hosszan nyomva → Widgetek → Glyph Eggs.
+**Tizenhárom widget**, Nothing-stílusban: fekete lap, kerek gombok, pontmátrixos feliratok és számok, **piros pötty, ha fut**. Kitétel: **Beállítások → Widgetek**, vagy a kezdőképernyőn hosszan nyomva → Widgetek → Glyph Eggs.
 
 | Widget | Méret | Tudja |
 |---|---|---|
@@ -537,6 +610,7 @@ Beállítások fül → **Csempék**: kiválasztod, és egyenként felkerülnek 
 | **Vízmérték** 🆕 | 2×2 | Koppintásra indul; élőben a **fok** és a **buborék** (fekve kör, élére állítva pontsor), vízszintesnél piros |
 | **Pörgetés** 🆕 | 2×2 | Koppintásra **pontokból rakott palack** pörög, és vele a LED-ek is; megállva „ITT ÁLLT MEG” |
 | **Asszisztens** 🆕 | 2×2 | Pontmátrixos mikrofon; koppintásra megnyitja a választott **AI-appot**, és bekapcsolja a LED-követést (API módban azonnal hallgat). Mutatja, mikor beszél az AI |
+| **Morze** 🆕 | 4×1 | Koppintásra indul a gyakorlás; futás közben a szó kódja pont-vonásban, megfejtések, sorozat, pontosság |
 | **Kitűzők** 🆕 | 4×2 | Mozgó kiemelt kitűző (koppintás = következő), szint, darabszám, az 5 legutóbbi (koppintás = Stat fül) |
 
 A pontmátrixos (Doto) feliratokat és rajzokat az app rajzolja képpé, így minden indítón egyformán jelennek meg. A Vízmérték és a Pörgetés widget futás közben kb. 3–12-szer frissül másodpercenként, az Előadás és a Homokóra percenként / 15 mp-enként.
@@ -555,7 +629,7 @@ A fülek a 12.3-tól egy nagy, ikonos **dokkban** vannak, két sorban, hármasá
 |---|---|
 | **Főoldal** | Kiemelve: **GLYPH BEACON** (alumínium kártya, kapcsolóval) és **ASSZISZTENS** (egy koppintásra hallgat). Alatta a kitűzött funkciók – hosszú nyomással vagy a Testreszabás kártyával változtatható |
 | **Játékok** | Simon, Zárfeltörő, Glyph Tojás, Dínófutás, Fújós + Dínófutás beállítása, Fújásfigyelés kapcsoló |
-| **Eszközök** | Pörgetés, Iránytű, Széf, Vízmérték, Időzítő, Légzés, Előadás + a Széf, az Időzítő, az Előadás és a Légzés beállítása |
+| **Eszközök** | Pörgetés, Iránytű, Széf, Vízmérték, Időzítő, Légzés, Előadás, **Csendzóna**, **Glyph Stúdió**, **Morze-gyakorló** + beállító kártyák (Széf, Időzítő, Előadás, Légzés, Csendzóna, Stúdió-kedvenc lejátszása) |
 | **Statisztika** | Szint, ábrák, kiértékelés, játékonkénti statisztika, kitűzők – lásd [fent](#-stat-fül-és-kitűzők) |
 | **Akku** | A fogyasztás – lásd lent |
 | **Beállítások** | (ha már feloldottad: **Titkos menü**) · Indítás és leállítás, Csempék, Háttérfutás, Rezgés, LED-szimuláció, Widgetek, Értesítések, Diagnosztika |
@@ -806,7 +880,8 @@ flowchart LR
 | `BeaconActivity.kt` | A Glyph Beacon alumínium oldala, `BeaconRadarView`, a Főoldal kiemelt kártyája |
 | `Assistant.kt` | `ClaudeClient` (Messages API), `TalkBus`, `TalkGlyph` (9 beszéd-animáció), `TalkAnim`, `AssistantModel` |
 | `ClaudeVoice.kt` | AI app mód: `KnownAi` (ismert AI-appok), `ClaudeLink` (a választott app megnyitása), `SoundFollower` (Visualizer + lejátszás-figyelés), `ClaudeLaunchActivity` |
-| `Stats.kt` | `GameStats` (indítások, idő, napok, órák, rekordok, sorozat, XP és szint), `Badge` (30 kitűző), `Achievements`, `BadgeArt` (a mozgó érmek rajza), `BadgeView` |
+| `Stats.kt` | `GameStats` (indítások, idő, napok, órák, rekordok, sorozat, XP és szint), `Badge` (41 kitűző), `Achievements`, `BadgeArt` (a mozgó érmek rajza), `BadgeView` |
+| `Morse.kt`, `MorseActivity.kt` | Morze-gyakorló: kódtábla, szavak, futó szalag (`MorseTrainer`), `MorseBus`, statisztika, megfejtő oldal |
 | `Theme.kt`, `NeonActivity.kt` | Neon témák (`NeonTheme`, `NeonThemes`, `NeonBackground`) és a titkos menü |
 | `StatsPage.kt` | A Stat fül: pontos diagramok (`DotColumns`, `HourDots`, `DotLine`), kiértékelés, kitűzőrács |
 | `AssistantActivity.kt` | Beszédfelismerés (hu-HU), felolvasás szótag-szinkronnal, beszélgetés, beállítások |
@@ -864,6 +939,8 @@ flowchart LR
 
 | Verzió | Újdonság |
 |---|---|
+| **12.6** | **Morze-gyakorló** (futó pont-vonás a felső sávon, billentyűzetes megfejtés, 8 mp után ismétlés) statisztikával, 5 kitűzővel → **Távíró téma**; **Morze widget** |
+| **12.5** | **Csendzóna** (telefon-böjt: a fénykert nő, amíg nem nyúlsz hozzá) statisztikával és 5 kitűzővel → **Zen téma**; **Glyph Stúdió** (saját LED-animációk); **Hangerő-kombináció** indító (saját sorrend funkciónként) |
 | **12.4** | **C0RRUPTED** glitch téma – csak mind a 30 kitűzővel (élő kitörések, megránduló kártyák, RGB-csúszás) |
 | **12.3** | **Titkos menü: neon témák** kitűzőkkel feloldva (és egy rejtett gomb), új nagy, ikonos **fül-dokk** |
 | **12.2** | **Bármelyik AI-app** az AI módhoz (ChatGPT, Gemini, Copilot, Perplexity…); új **Stat** fül szinttel, ábrákkal, kiértékeléssel; **30 kitűző** mozgó pontmátrixos érmekkel; **Kitűzők widget** |
