@@ -23,7 +23,7 @@ Glyph Beacon · AI-asszisztens · Stat és kitűzők · Simon Says · Zárfeltö
 A Glyph Eggs a Nothing Phone (2) hátlapján lévő **33 Glyph LED-et** játékká és hasznos eszközzé teszi. A telefon többnyire kijelzővel lefelé fekszik az asztalon, a LED-ek felfelé néznek – nem kell a képernyőt nézned. Mozdulatokkal (forgatás, kopogás, rázás, döntés, fújás, hangerő-gombok), **füttyel**, **hanggal**, csempékkel, widgetekkel vagy heti órarend szerint indítod. A hivatalos **Nothing Glyph Developer Kit**-re épül: nincs root, nincs trükközés.
 
 <p align="center">
-  <img src="docs/widgetek-12.png" alt="Az új widgetek: Vízmérték, Pörgetés, Homokóra, Asszisztens" width="640" />
+  <img src="widgetek-12.png" alt="Az új widgetek: Vízmérték, Pörgetés, Homokóra, Asszisztens" width="640" />
 </p>
 
 ## Tartalom
