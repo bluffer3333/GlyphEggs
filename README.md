@@ -13,7 +13,7 @@ Glyph Beacon · AI-asszisztens · Stat és kitűzők · Simon Says · Zárfeltö
 ![Kotlin](https://img.shields.io/badge/Kotlin-2.0-7F52FF?logo=kotlin&logoColor=white)
 ![Device](https://img.shields.io/badge/eszköz-Nothing%20Phone%20(2)-000000)
 ![Glyph SDK](https://img.shields.io/badge/Glyph%20Developer%20Kit-hivatalos-D71921)
-![Verzió](https://img.shields.io/badge/verzió-12.2-F2EFE6)
+![Verzió](https://img.shields.io/badge/verzió-12.4-F2EFE6)
 ![Build](https://img.shields.io/badge/build-GitHub%20Actions-2088FF?logo=githubactions&logoColor=white)
 
 </div>
@@ -436,6 +436,35 @@ A **Stat** fülön minden látszik, amit a Glyph Eggs-szel csináltál. Minden a
 
 **Kitűzők widget** (4×2): balra a kiemelt kitűző **mozog**: a kezdőképernyő hat képkockát pörget, így a csillanás körbefut. Koppintásra a következő megszerzett kitűzőre vált, amíg pedig nincs egy sem, a legközelebbi célt mutatja szürkén, haladással. Jobbra a neve, a fokozata, a szinted, a darabszám és az 5 legutóbbi kitűző; erre koppintva a Stat fül nyílik meg.
 
+### 🔒 Titkos menü: neon témák
+
+Az app elején nem látszik. Amikor megvan a **2. kitűződ**, értesítés jön, és megjelenik a **TITKOS MENÜ** a Stat fül tetején és a Beállítások fülön, az első neon témával. A többi téma további kitűzőkkel, **sorban** oldódik fel:
+
+| Téma | Hangulat | Kitűző kell |
+|---|---|---|
+| **Night City** | cyberpunk, magenta × cián, képcső-csíkozás | 2 |
+| **Synthwave** | 80-as évek naplemente, neonrács a horizonton | 4 |
+| **Toxic** | savzöld, sárga-fekete figyelmeztető csík | 6 |
+| **Grid Runner** | Tron-kék lézerrács, narancs kiemelés | 8 |
+| **Ultraviolet** | Nothing-piros × UV-lila derengés | 11 |
+| **Vaporwave** | pasztell neon, menta × rózsa | 14 |
+| **Arcade RGB** | szivárvány, minden kártya más színű | 18 |
+| **C0RRUPTED** 🏴 | glitch: sérült textúrák, szakadó képernyő, RGB-csúszás | **mind a 30** |
+
+A téma az egész appra érvényes: díszített háttér, neon szegélyű kártyák, izzó pontmátrixos címek és **színes hátlap-kép**. A widgetek maradnak Nothing-feketék. Bármikor visszaállítható az alap *Nothing* téma.
+
+<p align="center"><img src="docs/neon-temak.png" alt="A neon témák" width="760" /></p>
+
+**C0RRUPTED – az utolsó, a legnehezebb.** Csak az kapja meg, aki **mind a 30 kitűzőt** összegyűjtötte, a Fénylegendát (500 indítás) és a Gyűjtőt is. A téma „sérült”: a háttéren pixelblokkok, zaj és színes szakadásvonalak vannak, minden felirat piros RGB-szellemképet kap. Időnként, véletlenszerűen pár képkockányi kitörés jön, ilyenkor a kártyák megrándulnak és elcsúsznak, a képernyőn cián és piros szakadások futnak át. Utána minden visszaáll, mintha mi sem történt volna.
+
+<p align="center"><img src="docs/glitch.png" alt="C0RRUPTED glitch téma" width="300" /></p>
+
+<details>
+<summary><b>Spoiler: a titkos gomb</b></summary>
+
+A Főoldalon **nyomd és tartsd 10 másodpercig a hátlap képét** (az élő Glyph-képet). Az első 2 mp-ben semmi nem történik, utána a kép lassan feltöltődik, és másodpercenként egy kis kattanás jelez. A végén győzelmi rezgés jön, **minden neon téma feloldódik** (a C0RRUPTED is), és megnyílik a titkos menü. Ha közben elengeded, nem történik semmi.
+</details>
+
 ---
 
 ## Indítás és leállítás
@@ -520,14 +549,16 @@ A pontmátrixos (Doto) feliratokat és rajzokat az app rajzolja képpé, így mi
 
 A főképernyő a Nothing Glyph Interface stílusát követi: felül az élő Glyph-kép, a **Most fut** kártya (koppintás = leállítás) és az **Újra** kártya, alatta a **Mozdulatfigyelés** kapcsoló.
 
+A fülek a 12.3-tól egy nagy, ikonos **dokkban** vannak, két sorban, hármasával. A gombok nagyok (56 dp), a feliratok kiírva; a kiválasztott fül kitöltve világít, neon témában a téma színében.
+
 | Fül | Tartalom |
 |---|---|
 | **Főoldal** | Kiemelve: **GLYPH BEACON** (alumínium kártya, kapcsolóval) és **ASSZISZTENS** (egy koppintásra hallgat). Alatta a kitűzött funkciók – hosszú nyomással vagy a Testreszabás kártyával változtatható |
 | **Játékok** | Simon, Zárfeltörő, Glyph Tojás, Dínófutás, Fújós + Dínófutás beállítása, Fújásfigyelés kapcsoló |
 | **Eszközök** | Pörgetés, Iránytű, Széf, Vízmérték, Időzítő, Légzés, Előadás + a Széf, az Időzítő, az Előadás és a Légzés beállítása |
-| **Stat** | Szint, ábrák, kiértékelés, játékonkénti statisztika, kitűzők – lásd [fent](#-stat-fül-és-kitűzők) |
+| **Statisztika** | Szint, ábrák, kiértékelés, játékonkénti statisztika, kitűzők – lásd [fent](#-stat-fül-és-kitűzők) |
 | **Akku** | A fogyasztás – lásd lent |
-| **Beáll.** (Beállítások) | Indítás és leállítás, Csempék, Háttérfutás, Rezgés, LED-szimuláció, Widgetek, Értesítések, Diagnosztika |
+| **Beállítások** | (ha már feloldottad: **Titkos menü**) · Indítás és leállítás, Csempék, Háttérfutás, Rezgés, LED-szimuláció, Widgetek, Értesítések, Diagnosztika |
 
 Minden kártyán az **„i”** gomb részletes súgót nyit (indítás, használat, mit jelentenek a LED-ek), onnan indítható vagy beállítható a mozdulata.
 
@@ -776,6 +807,7 @@ flowchart LR
 | `Assistant.kt` | `ClaudeClient` (Messages API), `TalkBus`, `TalkGlyph` (9 beszéd-animáció), `TalkAnim`, `AssistantModel` |
 | `ClaudeVoice.kt` | AI app mód: `KnownAi` (ismert AI-appok), `ClaudeLink` (a választott app megnyitása), `SoundFollower` (Visualizer + lejátszás-figyelés), `ClaudeLaunchActivity` |
 | `Stats.kt` | `GameStats` (indítások, idő, napok, órák, rekordok, sorozat, XP és szint), `Badge` (30 kitűző), `Achievements`, `BadgeArt` (a mozgó érmek rajza), `BadgeView` |
+| `Theme.kt`, `NeonActivity.kt` | Neon témák (`NeonTheme`, `NeonThemes`, `NeonBackground`) és a titkos menü |
 | `StatsPage.kt` | A Stat fül: pontos diagramok (`DotColumns`, `HourDots`, `DotLine`), kiértékelés, kitűzőrács |
 | `AssistantActivity.kt` | Beszédfelismerés (hu-HU), felolvasás szótag-szinkronnal, beszélgetés, beállítások |
 | `MotionDetector.kt` | Szenzorok, mozdulat-felismerés, játék közbeni kopogás / rázás / dőlés |
@@ -832,6 +864,8 @@ flowchart LR
 
 | Verzió | Újdonság |
 |---|---|
+| **12.4** | **C0RRUPTED** glitch téma – csak mind a 30 kitűzővel (élő kitörések, megránduló kártyák, RGB-csúszás) |
+| **12.3** | **Titkos menü: neon témák** kitűzőkkel feloldva (és egy rejtett gomb), új nagy, ikonos **fül-dokk** |
 | **12.2** | **Bármelyik AI-app** az AI módhoz (ChatGPT, Gemini, Copilot, Perplexity…); új **Stat** fül szinttel, ábrákkal, kiértékeléssel; **30 kitűző** mozgó pontmátrixos érmekkel; **Kitűzők widget** |
 | **12.1** | Asszisztens **Claude app módban**: a saját fiókoddal, API-kulcs és költség nélkül; a LED-ek a Claude app hangját követik |
 | **12.0** | **Glyph Beacon** (füttyre megtalálható telefon), **Asszisztens** (Claude, felolvasás, 9 beszéd-animáció), Vízmérték / Pörgetés / Homokóra / Asszisztens widget, Széf döntéssel, **Légzés** az Egyensúly helyett, új Indítás és leállítás oldal, érzékenyebb kopogás és fújás, könnyebb Dínó |
