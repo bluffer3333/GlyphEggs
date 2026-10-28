@@ -399,7 +399,7 @@ Alapból a bekapcsoló gomb **nem** állítja le (hogy megnézhesd az órát); a
 
 ## 🏆 Stat fül és kitűzők
 
-<p align="center"><img src="docs/kituzok.png" alt="Pontmátrixos, mozgó kitűzők" width="700" /></p>
+<p align="center"><img src="kituzok.png" alt="Pontmátrixos, mozgó kitűzők" width="700" /></p>
 
 A **Stat** fülön minden látszik, amit a Glyph Eggs-szel csináltál. Minden adat a telefonon marad.
 
@@ -453,11 +453,11 @@ Az app elején nem látszik. Amikor megvan a **2. kitűződ**, értesítés jön
 
 A téma az egész appra érvényes: díszített háttér, neon szegélyű kártyák, izzó pontmátrixos címek és **színes hátlap-kép**. A widgetek maradnak Nothing-feketék. Bármikor visszaállítható az alap *Nothing* téma.
 
-<p align="center"><img src="docs/neon-temak.png" alt="A neon témák" width="760" /></p>
+<p align="center"><img src="neon-temak.png" alt="A neon témák" width="760" /></p>
 
 **C0RRUPTED – az utolsó, a legnehezebb.** Csak az kapja meg, aki **mind a 30 kitűzőt** összegyűjtötte, a Fénylegendát (500 indítás) és a Gyűjtőt is. A téma „sérült”: a háttéren pixelblokkok, zaj és színes szakadásvonalak vannak, minden felirat piros RGB-szellemképet kap. Időnként, véletlenszerűen pár képkockányi kitörés jön, ilyenkor a kártyák megrándulnak és elcsúsznak, a képernyőn cián és piros szakadások futnak át. Utána minden visszaáll, mintha mi sem történt volna.
 
-<p align="center"><img src="docs/glitch.png" alt="C0RRUPTED glitch téma" width="300" /></p>
+<p align="center"><img src="glitch.png" alt="C0RRUPTED glitch téma" width="300" /></p>
 
 <details>
 <summary><b>Spoiler: a titkos gomb</b></summary>
